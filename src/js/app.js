@@ -77,8 +77,6 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.LegacySupport.fixImages();
 
       // APP.Plugins.Ymaps.init();
-      // APP.Plugins.Countdown.init();
-      // APP.Plugins.FooterReveal.init();
     };
 
     // All components from `src/componenets`

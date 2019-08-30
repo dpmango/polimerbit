@@ -2,5 +2,48 @@
 footer.footer
   .container
     .footer__wrapper
+      // left
+      .footer__left
+        .footer__logo
+          +svgMono('logo')
+        .footer__address
+          .footer__address-title МЫ НАХОДИМСЯ ТУТ
+          .footer__address-content 109202, г. Москва, 2-я Карачаровская ул., д. 3
+        .footer__developer
+          a(href="#" target="_blank") Создание сайта – Студия NetLab
+
+      // right
+      .footer__right
+        // menu
+        ul.footer__menu
+          li
+            a(href="#") История
+          li
+            a(href="#") Контактное производство
+          li
+            a(href="#") Производство
+          li
+            a(href="#") Документы
+          li
+            a(href="#") Полимербыт сегодня
+          li
+            a(href="#") Контакты
+          li
+            a(href="#") Работа с нами
+
+        // nav
+        .footer__nav
+          a(href="#" target="_blank").footer__nav-link.nav-link
+            .nav-link__content
+              .nav-link__title Сайт бренда
+              .nav-link__name Полимербыт
+            .nav-link__icon
+              +svgMono('arrow-right')
+          a(href="#" target="_blank").footer__nav-link.nav-link
+            .nav-link__content
+              .nav-link__title Сайт бренда
+              .nav-link__name Forma
+            .nav-link__icon
+              +svgMono('arrow-right')
 
 // FOOTER :: END

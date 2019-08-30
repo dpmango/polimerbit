@@ -1,7 +1,134 @@
 // FOOTER
 .footer
-  background: #f5f5f5
+  border-top: 1px solid $borderColor
   &__wrapper
     display: flex
+
+  &__left, &__right
+    width: 100%
+    min-width: 1px
+    min-height: 0px
+
+  &__left
+    flex: 0 0 330px
+    max-width: 330px
+    padding: 40px 0 48px
+
+  &__right
+    flex: 1 1 auto
+    max-width: 100%
+    border-left: 1px solid $borderColor
+    // minus 5px pl for menu a
+    padding: 50px 0 50px 35px
+    display: flex
+    align-items: flex-start
+
+  &__logo
+    margin: 0px 0 24px
+    color: $colorPrimary
+    font-size: 0
+    .ico
+      font-size: 50px
+
+  &__address
+    margin: 24px 0 12px
+  &__address-title
+    font-size: 12px
+    line-height: 16px
+    color: #BDBDBD
+  &__address-content
+    margin: 4px 0
+    font-size: 14px
+    line-height: 18px
+    color: #4F4F4F
+
+  &__developer
+    a
+      display: inline-block
+      font-size: 13px
+      line-height: 17px
+      color: #828282
+      transition: color .25s $ease
+      &:hover
+        color: $colorPrimary
+
+  &__menu
+    list-style: none
+    margin: 0 25px 0 0
+    padding: 0
+    display: flex
+    flex-wrap: wrap
+    li
+      width: 100%
+      min-width: 1px
+      min-height: 0
+      flex: 0 0 50%
+      max-width: 50%
+      margin-bottom: 6px
+    a
+      display: inline-block
+      padding: 5px
+      font-size: 13px
+      line-height: 1.3
+      text-transform: uppercase
+      transition: color .25s $ease
+      &:hover
+        color: $colorPrimary
+
+  &__nav
+    display: flex
+    margin-left: auto
+  &__nav-link
+    flex: 0 0 auto
+    margin-right: 20px
+    &:last-child
+      margin-right: 0px
+
+/* nav link
+.nav-link
+  min-width: 175px
+  display: flex
+  align-items: center
+  padding: 16px 12px 16px 16px
+  border: 1px solid #E0E0E0
+  border-radius: 5px
+  transition: border .25s $ease
+
+  &__content
+    flex: 1 1 auto
+    min-width: 1px
+    min-height: 0
+  &__title
+    font-size: 12px
+    line-height: 1.67
+    text-transform: uppercase
+    color: #828282
+
+  &__name
+    font-weight: 700
+    font-size: 16px
+    line-height: 1.25
+    color: #333333
+
+  &__icon
+    position: relative
+    flex: 0 0 auto
+    display: flex
     align-items: center
-    height: 100px
+    justify-content: center
+    text-align: center
+    size: 32px
+    border-radius: 50%
+    background: #F9F9F9
+    color: $colorPrimary
+    font-size: 0
+    transition: color .25s $ease
+    .ico
+      font-size: 14px
+      transform: translateX(0.2em)
+
+  &:hover
+    border-color: $colorPrimary
+    .nav-link
+      &__icon
+        color: $colorGreen
