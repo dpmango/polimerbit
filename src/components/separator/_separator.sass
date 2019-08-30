@@ -1,0 +1,28 @@
+//separator
+.separator
+  display: block
+  background: $colorPrimary
+  color: white
+  &__wrapper
+    position: relative
+    display: flex
+
+  &__image
+    position: absolute
+    bottom: 0
+    left: 0
+    font-size: 0
+    transform: translateY(0px)
+    transition: transform .25s $ease
+    img
+      max-width: 100%
+
+  &__title
+    padding: 24px 0 24px 220px
+    font-size: 20px
+    line-height: 1.3
+
+  &:hover
+    .separator
+      &__image
+        transform: translateY(-10px)
