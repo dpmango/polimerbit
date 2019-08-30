@@ -17,7 +17,7 @@
 
   &__logo
     flex: 0 0 auto
-    padding-right: 30px
+    padding-right: 20px
     font-size: 0
     color: $colorPrimary
     transition: opacity .25s $ease
@@ -39,7 +39,7 @@
       display: inline-block
       margin-right: 10px
       &:last-child
-        margin-right: 0
+        margin-right: -7px
       &.is-active
         color: $colorPrimary
         &::after
@@ -65,8 +65,6 @@
         &::after
           right: 7px
 
-
-
   &__hamburger
     display: none
     padding-left: 20px
@@ -90,12 +88,17 @@
     transform: translate3d(0,-100%,0) !important
 
 
-+r($lg)
++r($xl)
   .header
-    &__cta
-      display: none
+    &__logo
+      .ico
+        font-size: 40px
+    &__menu
+      font-size: 12px
+      li
+        margin-right: 0px
 
-+r($md)
++r($lg)
   .header
     &__menu
       display: none
@@ -106,4 +109,5 @@
 +r($sm)
   .header
     &__logo
-      font-size: 30px
+      .ico
+        font-size: 34px

@@ -13,8 +13,7 @@
       if (!fromPjax) {
         this.getHeaderParams();
         this.hamburgerClickListener();
-        this.listenScroll();
-        this.listenResize();
+        this.mobileNaviClickListener();
       }
 
       this.setMenuClass();
@@ -44,43 +43,22 @@
         APP.Plugins.ScrollBlock.blockScroll();
       });
     },
-    listenScroll: function() {
-      _window.on('scroll', this.scrollHeader.bind(this));
-    },
-    listenResize: function() {
-      _window.on('resize', debounce(this.getHeaderParams.bind(this), 100));
-    },
-    scrollHeader: function() {
-      if (this.data.header.container !== undefined) {
-        var fixedClass = 'is-fixed';
-        var visibleClass = 'is-fixed-visible';
+    mobileNaviClickListener: function() {
+      var _this = this;
 
-        // get scroll params from blocker function
-        var scroll = APP.Plugins.ScrollBlock.getData();
+      // will close navi on tablet on outside clicks
+      _document.on('click', function(e) {
+        // close on outside clicks
+        if (window.innerWidth <= 1024) {
+          var $target = $(e.target);
+          var $closestHeader = $target.closest('.header').length === 0;
+          var $closestNaviWrapper = $target.closest('.mobile-navi__wrapper').length === 0;
 
-        if (scroll.blocked) return;
-
-        if (scroll.y > this.data.header.bottomPoint) {
-          this.data.header.container.addClass(fixedClass);
-
-          if (scroll.y > this.data.header.bottomPoint * 2 && scroll.direction === 'up') {
-            this.data.header.container.addClass(visibleClass);
-          } else {
-            this.data.header.container.removeClass(visibleClass);
+          if ($closestHeader && $closestNaviWrapper) {
+            _this.closeMobileMenu();
           }
-        } else {
-          // emulate position absolute by giving negative transform on initial scroll
-          var normalized = Math.floor(normalize(scroll.y, this.data.header.bottomPoint, 0, 0, 100));
-          var reverseNormalized = (100 - normalized) * -1;
-          reverseNormalized = reverseNormalized * 1.2; // a bit faster transition
-
-          this.data.header.container.css({
-            transform: 'translate3d(0,' + reverseNormalized + '%,0)',
-          });
-
-          this.data.header.container.removeClass(fixedClass);
         }
-      }
+      });
     },
     setMenuClass: function() {
       // SET ACTIVE CLASS IN HEADER
