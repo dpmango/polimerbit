@@ -2,7 +2,7 @@ ProjectTitle: Polimerbit
 
 PageList:
   - file: homepage.html
-    ready: 30
+    ready: 50
   - file: history.html
     ready: 0
   - file: production.html

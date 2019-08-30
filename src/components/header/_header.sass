@@ -1,6 +1,6 @@
 /* HEADER
 .header
-  position: fixed
+  position: absolute
   top: 0
   right: 0
   left: 0
@@ -20,7 +20,7 @@
     padding-right: 20px
     font-size: 0
     color: $colorPrimary
-    transition: opacity .25s $ease
+    transition: opacity .25s $ease, transform .25s $ease
     .ico
       font-size: 48px
     &:hover
@@ -87,6 +87,12 @@
     transition: transform .25s $ease
     transform: translate3d(0,-100%,0) !important
 
+  &[data-modifier="no-logo"]
+    .header
+      &__logo
+        opacity: 0
+        transform: translateY(-20px)
+        pointer-events: none
 
 +r($xl)
   .header
