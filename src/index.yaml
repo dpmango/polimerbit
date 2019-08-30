@@ -1,7 +1,25 @@
-ProjectTitle: Project-name
+ProjectTitle: Polimerbit
 
 PageList:
   - file: homepage.html
-    ready: 100
-  - file: page.html
+    ready: 30
+  - file: history.html
+    ready: 0
+  - file: production.html
+    ready: 0
+  - file: polimer-today.html
+    ready: 0
+  - file: cooperation.html
+    ready: 0
+  - file: contact-prod.html
+    ready: 0
+  - file: contact-prod.html
+    ready: 0
+  - file: materials.html
+    ready: 0
+  - file: contacts.html
+    ready: 0
+  - file: news-article.html
+    ready: 0
+  - file: 404.html
     ready: 0
