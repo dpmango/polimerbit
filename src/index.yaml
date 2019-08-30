@@ -8,18 +8,16 @@ PageList:
   - file: production.html
     ready: 25
   - file: polimer-today.html
-    ready: 0
+    ready: 10
   - file: cooperation.html
     ready: 25
   - file: contact-prod.html
     ready: 25
-  - file: contact-prod.html
-    ready: 0
   - file: materials.html
-    ready: 0
+    ready: 10
   - file: contacts.html
-    ready: 0
+    ready: 10
   - file: news-article.html
-    ready: 0
+    ready: 10
   - file: 404.html
-    ready: 0
+    ready: 10
