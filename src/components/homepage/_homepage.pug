@@ -14,3 +14,29 @@
             .h-news-card__title Новости
             .h-news-card__description Осень не за горами – Полимербыт представляет эффективные решения для школьников
             .h-news-card__date 25.05.2019
+
+    // homepage products
+    .homepage__products
+      .products
+        .products__col
+          .product
+            .product__image
+              img(src='img/productImg_1.png' srcset='img/productImg_1@2x.png 2x')
+
+        .products__col
+          .product
+            .product__image
+              img(src='img/productImg_2.png' srcset='img/productImg_2@2x.png 2x')
+            .product__content
+              .product__plus
+                +svgMono('plus')
+              .product__dropdown
+                .product__dropdown-wrapper
+                  .product__article Артикул: 35601
+                  .product__dropdown-image
+                    img(src='img/productDrop_1.png' srcset='img/productDrop_1@2x.png 2x')
+                  .product__title Миска с крышкой 2л
+
+        .products__col.products__col--2
+
+        .products__col.products__col--4
