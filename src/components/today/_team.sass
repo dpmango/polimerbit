@@ -1,0 +1,152 @@
+.team
+  padding-bottom: 70px
+  &__grid
+    display: flex
+    margin: -10px -10px 0
+    flex-wrap: wrap
+  &__col
+    padding: 10px
+    width: 25%
+    position: relative
+    &--2
+      width: 50%
+      margin-bottom: 140px
+      &::before
+        display: block
+        position: absolute
+        content: ''
+        width: calc(100% - 20px)
+        height: 50%
+        left: 10px
+        bottom: 10px
+        background: linear-gradient(0deg, #202020 -3.47%, rgba(32, 32, 32, 0) 100%)
+      .team__info
+        position: absolute
+        z-index: 2
+        bottom: 50px
+        left: 34px
+        p
+          color: #fff
+          &.name
+            font-size: 28px
+            line-height: 36px
+          &.prof
+            font-size: 16px
+            line-height: 24px
+            margin-top: 5px
+
+  &__image
+    width: 100%
+    overflow: hidden
+    font-size: 0
+    img
+      width: 100%
+      height: auto
+
+  &__info
+    min-height: 110px
+    padding-top: 16px
+    p
+      margin: 0
+      &.name
+        font-size: 20px
+        line-height: 26px
+        font-weight: 700
+      &.prof
+        margin-top: 10px
+      &.desc
+        font-size: 14px
+        line-height: 20px
+        margin-top: 8px
+
++r($hd)
+  .team
+    padding-bottom: 50px
+    &__col
+      &--2
+        margin-bottom: 0
+    &__info
+      padding-right: 15px
+      min-height: 118px
+
++r($xl)
+  .team
+    &__col
+      &--2
+        .team__info
+          bottom: 35px
+          p
+            &.name
+              font-size: 22px
+              line-height: 28px
+            &.prof
+              font-size: 14px
+              line-height: 20px
+            &.desc
+              font-size: 12px
+              line-height: 16px
+    &__info
+      padding-right: 25px
+      min-height: 105px
+      p
+        &.name
+          font-size: 16px
+          line-height: 21px
+        &.prof
+          font-size: 12px
+          line-height: 24px
+          margin-top: 4px
+
++r($lg)
+  .team
+    &__col
+      &--2
+        margin-bottom: 25px
+
+    &__info
+      min-height: 100px
+
+
++r($md)
+  .team
+    &__grid
+      margin: -10px -4px 0
+      width: calc(100% + 8px)
+    &__col
+      padding: 4px
+      width: 50%
+      &--2
+        width: 100%
+        margin-bottom: 0
+        &:last-of-type
+          margin-bottom: 25px
+          display: none
+        &::before
+          left: 4px
+          bottom: 4px
+          width: calc(100% - 8px)
+        .team__info
+          left: 20px
+          bottom: 20px
+          p
+            &.name
+              font-size: 18px
+              line-height: 23px
+            &.prof
+              font-size: 14px
+              line-height: 18px
+            &.desc
+              font-size: 12px
+              line-height: 14px
+
+
+    &__info
+      min-height: 86px
+      padding-right: 0
+      p
+        &.name
+          font-size: 14px
+          line-height: 18px
+        &.prof
+          font-size: 10px
+          line-height: 13px

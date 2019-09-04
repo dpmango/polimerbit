@@ -102,20 +102,22 @@
 
 +rmin($hd)
   .header
+    &__wrapper
+      padding: 49px 0 30px
     &__menu
       li
         margin-right: 25px
       a
         font-size: 16px
         line-height: 21px
+    &__logo
+      .ico
+        font-size: 52px
 
 
 +r($xl)
   .header
     &__logo
-      opacity: 1 !important
-      pointer-events: all !important
-      transform: translateY(0) !important
       .ico
         font-size: 40px
     &__menu
@@ -125,10 +127,6 @@
 
 +r($lg)
   .header
-    &__logo
-      opacity: 0 !important
-      pointer-events: none !important
-      transform: translateY(0) !important
     &__menu
       display: none
     &__hamburger

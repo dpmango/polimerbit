@@ -2,13 +2,13 @@ ProjectTitle: Polimerbit
 
 PageList:
   - file: homepage.html
-    ready: 70
+    ready: 80
   - file: history.html
     ready: 25
   - file: production.html
     ready: 25
   - file: polimer-today.html
-    ready: 10
+    ready: 80
   - file: cooperation.html
     ready: 25
   - file: contact-prod.html
