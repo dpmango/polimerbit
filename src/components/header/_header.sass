@@ -100,10 +100,22 @@
       &__wrapper
         color: white
 
++rmin($hd)
+  .header
+    &__menu
+      li
+        margin-right: 25px
+      a
+        font-size: 16px
+        line-height: 21px
+
 
 +r($xl)
   .header
     &__logo
+      opacity: 1 !important
+      pointer-events: all !important
+      transform: translateY(0) !important
       .ico
         font-size: 40px
     &__menu
@@ -113,14 +125,22 @@
 
 +r($lg)
   .header
+    &__logo
+      opacity: 0 !important
+      pointer-events: none !important
+      transform: translateY(0) !important
     &__menu
       display: none
     &__hamburger
       margin-left: auto
       display: block
+    &__wrapper
+      padding: 16px 0
 
 +r($sm)
   .header
+    // &__wrapper
+    //   padding: 20px 0
     &__logo
       .ico
         font-size: 34px

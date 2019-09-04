@@ -13,6 +13,8 @@
     flex-direction: column
     overflow-y: auto
     max-width: 440px
+    width: 100%
+    min-width: 320px
     margin-left: auto
     background: white
     transform: translate3d(100%,0%,0)
@@ -47,6 +49,36 @@
       &__wrapper
         transform: translate3d(0,0,0)
 
+  &__logo
+    display: none
+
 +r($lg)
   .mobile-navi
     display: flex
+    &__menu
+      margin-top: 0
+    &__wrapper
+      padding-top: 55px
+
++r($sm)
+  .mobile-navi
+    &__wrapper
+      padding: 40px
+    &__menu
+      padding-top: 43px
+      li
+        font-size: 16px
+        line-height: 21px
+        margin-bottom: 14px
+        a
+          padding: 5px 0
+    &__logo
+      display: block
+      font-size: 0
+      color: $colorPrimary
+      transition: opacity .25s $ease, transform .25s $ease
+      margin-top: 0px
+      .ico
+        font-size: 48px
+      &:hover
+        opacity: 0.8

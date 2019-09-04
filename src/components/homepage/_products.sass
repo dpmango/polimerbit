@@ -14,6 +14,11 @@
     &--4
       flex-basis: $col4
       max-width: $col4
+    &--mt-
+      margin-top: -90px
+    &--editable
+      padding-left: 5%
+      padding-top: 20px
 
 // product
 .product
@@ -54,6 +59,7 @@
         transform: translate3d(0,0,0)
 
 
+
   &__dropdown
     position: absolute
     z-index: 3
@@ -71,6 +77,10 @@
     transform: translate3d(10px,0,0)
     will-change: transform
     transition: transform .25s $ease
+    &--reverse
+      right: 24px
+      left: auto
+      transform: translate3d(-10px,0,0)
   &__dropdown-wrapper
     position: relative
     flex: 1 0 auto
@@ -99,3 +109,139 @@
       width: 100%
       height: 100%
       object-fit: cover
+
+  &__icon
+    font-size: 0
+    margin-top: 35px
+    .ico
+      font-size: 80px
+      color: $colorPrimary
+    img
+      height: 80px
+
+  &__info
+    p
+      font-size: 18px
+      line-height: 28px
+      color: #333
+      margin: 24px 0 0
+      span
+        color: $colorPrimary
+        font-weight: 600
+
++r($hd)
+  .products
+    &__col
+      &--mt-
+        margin-top: -65px
+  .product
+    &__icon
+      margin-top: 5px
+    &__info
+      p
+        font-size: 16px
+        line-height: 24px
+
+
++r($xl)
+  .products
+    &__col
+      &--2
+        flex-basis: $col3
+        max-width: $col3
+      &--mt-
+        flex-basis: $col3
+        max-width: $col3
+        margin-top: 25px
+
++r($lg)
+  .product
+    &__plus
+      width: 32px
+      height: 32px
+      .ico
+        font-size: 12px
+    &__content
+      width: 32px
+      height: 32px
+      right: 8%
+      top: calc(50% - 16px)
+    &__dropdown
+      min-width: 180px
+      min-height: 180px
+      top: -80px
+    &__dropdown-wrapper
+      padding: 15px
+    &__title
+      font-size: 12px
+    &__icon
+      margin-top: -5px
+      .ico
+        font-size: 60px
+      img
+        height: 60px
+    &__info
+      p
+        font-size: 14px
+        line-height: 20px
+        margin-top: 18px
+  .products
+    &__col
+      &--mt-
+        margin-top: 10px
+      &--2
+        margin-bottom: 65px
+
++r($md)
+  .products
+    &__col
+      flex: 0 0 $col6
+      max-width: $col6
+      &--2
+        flex: 0 0 $col12
+        max-width: $col12
+        margin-top: 25px
+        margin-bottom: 0
+        .product
+          display: flex
+      &--4
+        flex: 0 0 $col12
+        max-width: $col12
+      &--editable
+        flex: 0 0 $col12
+        max-width: $col12
+        .product
+          display: flex
+  .product
+    &__icon
+      margin-top: 0
+      margin-right: 10px
+    &__info
+      p
+        margin-top: 0
+    &__dropdown
+      min-width: 140px
+      min-height: 140px
+      left: 50%
+      right: auto
+      top: 100%
+      transform: translate3d(-50%, 5px, 0)
+    &__dropdown-wrapper
+      padding: 10px
+    &__article, &__title
+      left: 15px
+    &__title
+      font-size: 10px
+      bottom: 15px
+    &__article
+      top: 15px
+      font-size: 10px
+    &__content
+      right: auto
+      left: 50%
+      transform: translateX(-50%)
+    &__plus
+      &:hover
+        & + .product__dropdown
+          opacity: 1
+          transform: translate3d(-50%,-10px,0)

@@ -1,6 +1,6 @@
 // HEADER :: START
 header.header
-  .container
+  .container.container--full
     .header__wrapper
       a(href="homepage.html").header__logo
         +svgMono('logo')
@@ -14,7 +14,7 @@ header.header
         li
           a(href="#") Работа с нами
         li
-          a(href="#") Контрактное производство
+          a(href="#") Контактное производство
         li
           a(href="#") Документы
         li
@@ -28,6 +28,8 @@ header.header
 // MOBILE NAVI
 .mobile-navi
   .mobile-navi__wrapper
+    a(href="homepage.html").mobile-navi__logo
+      +svgMono('logo')
     ul.mobile-navi__menu
       li
         a(href="#") История
@@ -38,7 +40,7 @@ header.header
       li
         a(href="#") Работа с нами
       li
-        a(href="#") Контрактное производство
+        a(href="#") Контактное производство
       li
         a(href="#") Документы
       li
