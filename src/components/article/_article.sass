@@ -1,0 +1,91 @@
+.article
+  padding: 197px 0 100px
+  &__pre-title
+    font-size: 18px
+    line-height: 23px
+    text-align: center
+    color: rgba(#828282, 0.6)
+    margin: 0 auto
+  &__title
+    font-size: 35px
+    line-height: 47px
+    text-align: center
+    margin: 16px auto
+    max-width: 1000px
+
+  &__image
+    font-size: 0
+    width: 100%
+    margin-top: 24px
+    img
+      width: 100%
+      height: auto
+
+  &__content
+    p
+      margin: 16px 0 0
+      font-size: 18px
+      line-height: 26px
+      color: #333
+      &.p-big
+        font-size: 22px
+        line-height: 28px
+        color: $fontColor
+        margin: 32px 0 24px
+      a
+        text-decoration: underline
+        font-weight: 700
+        color: $colorPrimary
+
++r($hd)
+  .article
+    padding: 152px 0 100px
+    &__title
+      font-size: 30px
+      line-height: 39px
+    &__content
+      p
+        font-size: 16px
+        line-height: 24px
+        color: #333
+        &.p-big
+          font-size: 20px
+          line-height: 26px
+
++r($xl)
+  .article
+    padding: 145px 0 100px
+    &__pre-title
+      font-size: 16px
+      line-height: 21px
+    &__title
+      font-size: 28px
+      line-height: 36px
+
++r($lg)
+  .article
+    padding: 95px 0 60px
+    &__title
+      font-size: 20px
+      line-height: 26px
+
++r($md)
+  .article
+    padding: 90px 0 80px
+    &__pre-title
+      text-align: left
+      font-size: 14px
+      line-height: 18px
+    &__title
+      font-size: 18px
+      line-height: 23px
+      text-align: left
+    &__content
+      p
+        font-size: 14px
+        line-height: 20px
+        color: #333
+        &.p-big
+          font-size: 16px
+          line-height: 22px
+          margin: 24px 0 16px
