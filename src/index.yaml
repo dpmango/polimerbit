@@ -20,4 +20,4 @@ PageList:
   - file: news-article.html
     ready: 10
   - file: 404.html
-    ready: 10
+    ready: 80
