@@ -1,0 +1,170 @@
+.materials
+  padding-bottom: 128px
+  &__filter
+    margin: 52px -8px 0
+    &-btn
+      margin: 4px 8px
+      display: inline-block
+      padding: 5px 15px
+      font-size: 16px
+      line-height: 24px
+      border-radius: 50px
+      white-space: nowrap
+      color: #4F4F4F
+      border: 1px solid #E0E0E0
+      transition: all .25s $ease
+      &:hover
+        background: #E0E0E0
+      &.is-active
+        color: #fff
+        background: $colorPrimary
+        border-color: $colorPrimary
+
+  &__grid
+    margin: 4px -8px 8px
+    width: calc(100% + 16px)
+    display: flex
+    align-items: stretch
+    flex-wrap: wrap
+
+  &__col
+    width: 25%
+    padding: 8px 8px 12px
+
+  &__item
+    min-height: 268px
+    background: #fff
+    height: 100%
+    border-radius: 5px
+    padding: 24px
+    transition: all .25s $ease
+    position: relative
+    display: flex
+    flex-direction: column
+    cursor: pointer
+    &:hover
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1)
+      .ico-hover
+        opacity: 1
+
+  &__icon
+    position: relative
+    font-size: 0
+    width: 32px
+    height: 32px
+    .ico
+      font-size: 32px
+      color: #fff
+      position: absolute
+      left: 0
+      top: 0
+    .ico-hover
+      opacity: 0
+      transition: all .25s $ease
+
+  &__info
+    p
+      font-size: 18px
+      line-height: 28px
+      margin: 13px 0 16px
+
+  &__size
+    left: 24px
+    margin-top: auto
+    p
+      margin: 0
+      font-size: 12px
+      line-height: 16px
+      color: #828282
+
++r($hd)
+  .materials
+    padding-bottom: 90px
+    &__item
+      padding: 24px 16px
+    &__info
+      p
+        font-size: 16px
+        line-height: 24px
+
++r($xl)
+  .materials
+    padding-bottom: 90px
+    &__info
+      p
+        font-size: 14px
+        line-height: 20px
+
++r($lg)
+  .materials
+    padding-bottom: 90px
+    &__filter
+      margin: 0
+      display: flex
+      overflow: auto
+      padding-right: 24px
+      padding-bottom: 20px
+      &:after
+        position: static
+        display: block
+        content: ''
+        height: 36px
+        min-width: 1px
+      &-btn
+        margin: 0 4px
+        &:first-child
+          margin-left: 24px
+        &:last-child
+          margin-right: 24px
+    &__grid
+      margin-top: 8px
+    &__scroll
+      margin: 41px -24px 0 -24px
+      height: 36px
+      overflow: hidden
+    &__info
+      p
+        font-size: 14px
+        line-height: 20px
+        margin-top: 16px
+    &__col
+      width: 50%
+      padding: 8px
+    &__item
+      min-height: 1px
+
++r($md)
+  .materials
+    padding-bottom: 80px
+    &__scroll
+      margin: 32px -24px 0 -24px
+    &__filter
+      padding-right: 0
+      &-btn
+        margin: 0 4px
+        &:first-child
+          margin-left: 24px
+        &:last-child
+          margin-right: 24px
+    &__grid
+      margin-top: 16px
+      margin: 20px 0 0
+      width: 100%
+    &__col
+      width: 100%
+      padding: 4px 0
+    &__info
+      p
+        font-size: 14px
+        line-height: 20px
+
++r($sm)
+  .materials
+    &__scroll
+      margin: 32px -16px 0 -16px
+    &__filter
+      &-btn
+        &:first-child
+          margin-left: 16px
+        &:last-child
+          margin-right: 16px

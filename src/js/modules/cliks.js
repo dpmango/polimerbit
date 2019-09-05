@@ -26,6 +26,13 @@
             e.stopPropagation();
           }
         })
+
+        // adding filter button class on materials page
+        .on('click', '[js-materials-btn]', function(e) {
+          $('.materials__filter-btn').removeClass('is-active');
+          $(this).addClass('is-active');
+        })
+
         // scroll to section
         .on('click', 'a[href^="#section"]', function() {
           // section scroll
@@ -39,6 +46,23 @@
           });
 
           return false;
+        })
+
+        // pagination
+        .on('click', '[js-pagination]', function() {
+          var paginationPage = parseInt($('.cdp').attr('actpage'), 10);
+          // $('.cdp_i').on('click', function() {
+          var go = $(this)
+            .attr('href')
+            .replace('#!', '');
+          if (go === '+1') {
+            paginationPage++;
+          } else if (go === '-1') {
+            paginationPage--;
+          } else {
+            paginationPage = parseInt(go, 10);
+          }
+          $('.cdp').attr('actpage', paginationPage);
         });
     },
     destroy: function() {

@@ -14,7 +14,7 @@ PageList:
   - file: contact-prod.html
     ready: 25
   - file: materials.html
-    ready: 10
+    ready: 80
   - file: contacts.html
     ready: 10
   - file: news-article.html
