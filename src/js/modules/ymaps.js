@@ -17,8 +17,7 @@
       }
     },
     createScripts: function() {
-      var ymapsK =
-        'AN-UcV0BAAAAZSCsJAMADQMjA3KpCSLgCKftJD8RXZMtSQkAAAAAAAAAAACobQ8FObidrOQkQPAzM13N7L1jhg==';
+      var ymapsK = '9ba9a278-66f0-47c6-8197-0d404ee0def5';
       var ymapsScript = document.createElement('script');
       ymapsScript.type = 'text/javascript';
       ymapsScript.src = 'https://api-maps.yandex.ru/2.1/?apikey=' + ymapsK + '&lang=ru_RU';
@@ -68,7 +67,6 @@
         },
       };
 
-      console.log(params);
       if (!params.center) return;
 
       // CREATE MAP INSTANCE

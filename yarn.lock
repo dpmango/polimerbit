@@ -10091,6 +10091,11 @@ token-stream@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/token-stream/-/token-stream-0.0.1.tgz#ceeefc717a76c4316f126d0b9dbaa55d7e7df01a"
 
+tooltipster@^4.2.7:
+  version "4.2.7"
+  resolved "https://registry.yarnpkg.com/tooltipster/-/tooltipster-4.2.7.tgz#bce0e3ed6cc3f0e333fc1865e0df16a90e8f0e39"
+  integrity sha512-W4tY3LG2eyPY2VQZRH3JcsNuRl3jPCEGmKBPOMTP/05E3+1kOJjASzPRRkcpP+uf9vqX7+896ivU86f6B8Esgw==
+
 touch@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/touch/-/touch-3.1.0.tgz#fe365f5f75ec9ed4e56825e0bb76d24ab74af83b"

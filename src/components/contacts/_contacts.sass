@@ -64,10 +64,13 @@
 
   &__map
     margin-top: 16px
-    .js-ymap
+    height: 415px
+    display: flex
+    flex-direction: column
+    > div
+      flex: 1 1 auto
       width: 100%
-      min-height: 416px
-      outline: 1px solid green
+      height: 100%
 
   &__person
     display: flex
@@ -211,8 +214,7 @@
     &__icon
       margin-right: 16px
     &__map
-      .js-ymap
-        min-height: 230px
+      height: 230px
     &__person
       &-image
         width: 60px
