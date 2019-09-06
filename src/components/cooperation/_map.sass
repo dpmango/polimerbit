@@ -1,0 +1,29 @@
+.cooperation
+  padding: 100px 0
+  &__map
+    width: 100%
+    svg
+      width: 100%
+      height: auto
+    g
+      &:hover
+        path
+          fill: $colorPrimary
+    path, g
+      transition: all .15s $ease
+      &:hover
+        fill: rgba($colorPrimary, 0.6)
+      &.fill-fff
+        fill: #fff !important
+    circle
+      position: relative
+      &::before
+        display: block
+        position: absolute
+        content: ''
+        bottom: 100%
+        left: 50%
+        transform: translateX(-50%)
+        height: 100px
+        width: 100px
+        background: #fff
