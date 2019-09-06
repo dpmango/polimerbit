@@ -1,6 +1,7 @@
 // FOOTER
 .footer
   border-top: 1px solid $borderColor
+  background: #fff
   &__wrapper
     display: flex
 
@@ -122,16 +123,17 @@
     background: #F9F9F9
     color: $colorPrimary
     font-size: 0
-    transition: color .25s $ease
+    transition: all .25s $ease
     .ico
       font-size: 14px
-      transform: translateX(0.2em)
+      transform: translateX(0.1em)
 
   &:hover
     border-color: $colorPrimary
     .nav-link
       &__icon
-        color: $colorGreen
+        background: $colorPrimary
+        color: #fff
 
 +r($hd)
   .footer

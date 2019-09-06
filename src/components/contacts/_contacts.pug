@@ -1,0 +1,70 @@
+.contacts
+  .container.container--full
+    .contacts__grid
+      .contacts__left
+        p.contacts__title Главный офис
+        .contacts__row
+          .contacts__col
+            .contacts__item
+              .contacts__icon
+                +svgColor('icon-map')
+              p 109202, г. Москва.
+                br
+                | 2-я Карачаровская ул., д. 3
+          .contacts__col
+            .contacts__item
+              .contacts__icon
+                +svgColor('icon-phone')
+              a(href="tel:+74991710605") +7 (499) 171-06-05
+          .contacts__col
+            .contacts__item
+              .contacts__icon
+                +svgColor('icon-mail')
+              a(href="mailto:info@polimerbyt.ru") info@polimerbyt.ru
+        .contacts__map
+          .js-ymap
+      .contacts__right
+        p.contacts__title Кого вы представляете?
+        .contacts__right-content
+          .contacts__radio
+            .ui-checkbox
+              label Федеральная сеть
+                input(type="radio", name="group1")
+                span
+            .ui-checkbox
+              label Локальная сеть
+                input(type="radio", name="group1")
+                span
+            .ui-checkbox
+              label Дистрибьютора
+                input(type="radio", name="group1")
+                span
+
+          .contacts__select
+            select(js-select)
+              option(value="val0") Ваш регион
+              option(value="val1") СНГ
+              option(value="val2") ЦФО
+              option(value="val3") СЗФО
+              option(value="val4") УРФО
+              option(value="val5") СФО
+
+          .contacts__separator
+          .contacts__person-unknown.is-visible
+            .contacts__person-image
+              +svgColor('icon-view')
+            .contacts__person-info
+              p Для отображения контакта
+                br
+                | выберите сеть
+          .contacts__person
+            .contacts__person-image
+              img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
+            .contacts__person-info
+              p Макаренко Ирина
+              a(href="tel:+74991710605")
+                +svgColor('icon-phone-c')
+                | +7 (499) 171-06-05
+              a(href="mailto:info@polimerbit.ru")
+                +svgColor('icon-mail-c')
+                | info@polimerbit.ru

@@ -16,7 +16,7 @@ PageList:
   - file: materials.html
     ready: 80
   - file: contacts.html
-    ready: 10
+    ready: 70
   - file: news-article.html
     ready: 80
   - file: 404.html

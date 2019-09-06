@@ -17,7 +17,8 @@
       }
     },
     createScripts: function() {
-      var ymapsK = '9ba9a278-xxxxxxxxx';
+      var ymapsK =
+        'AN-UcV0BAAAAZSCsJAMADQMjA3KpCSLgCKftJD8RXZMtSQkAAAAAAAAAAACobQ8FObidrOQkQPAzM13N7L1jhg==';
       var ymapsScript = document.createElement('script');
       ymapsScript.type = 'text/javascript';
       ymapsScript.src = 'https://api-maps.yandex.ru/2.1/?apikey=' + ymapsK + '&lang=ru_RU';
