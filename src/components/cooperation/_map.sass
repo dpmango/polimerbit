@@ -6,10 +6,13 @@
       width: 100%
       height: auto
     g
+      cursor: pointer
       &:hover
         path
           fill: $colorPrimary
     path, g
+      position: relative
+      z-index: 1
       transition: all .15s $ease
       &:hover
         fill: rgba($colorPrimary, 0.6)
@@ -27,3 +30,41 @@
         height: 100px
         width: 100px
         background: #fff
+
+.map
+  &__tooltip
+    padding: 24px
+    background: #fff
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1)
+    border-radius: 8px
+    display: flex
+    flex-direction: column
+    max-width: 215px
+    &-title
+      font-size: 20px
+      line-height: 26px
+      color: $colorPrimary
+      font-weight: 700
+    &-row
+      display: flex
+      align-items: center
+      margin-top: 8px
+      p
+        font-size: 16px
+        line-height: 21px
+        margin: 0
+    &-image
+      margin-right: 12px
+      width: 67px
+      min-width: 67px
+      height: 45px
+      border: 1px solid $borderColor
+      padding: 10px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 0
+      img
+        object-fit: cover
+        width: 100%
+        margin: auto
