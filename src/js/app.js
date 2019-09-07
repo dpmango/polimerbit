@@ -27,7 +27,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
 
     app.onLoadTrigger = function() {
       // APP.Plugins.Preloader.loaded();
-      // APP.Plugins.LazyLoadImages.init();
+      APP.Plugins.LazyLoadImages.init();
     };
 
     app.refresh = function() {
@@ -74,10 +74,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.ScrollReveal.init();
       APP.Plugins.TextareaAutoExpand.init();
       APP.Plugins.Validations.init();
-      APP.Plugins.LegacySupport.fixImages();
-
       APP.Plugins.Tooltip.init();
-
       APP.Plugins.Ymaps.init();
     };
 

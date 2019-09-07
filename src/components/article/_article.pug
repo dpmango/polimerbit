@@ -3,8 +3,8 @@ article.article
 
     include ../page-head/_article
 
-    .article__image
-      img(src='img/articleImg.jpg' srcset='img/articleImg@2x.jpg 2x')
+    .article__image.scaler(style="padding-bottom: "+ (458/753)*100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1567858296/polimer/articleImg.jpg)")
+      img(js-lazy data-src='img/articleImg.jpg' data-srcset='img/articleImg@2x.jpg 2x')
     .article__content
       p.p-big Вся продукция изготовлена из безопасной пищевой пластмассы с яркими декорами, нанесенными с помощью технологии IML, которые не стираются и не отслаиваются в процессе использования.
       p А любимые персонажи на изделиях из мультсериалов «Фиксики» и DISNEY («Самолеты», «Тачки», «Мики Маус», «Феи», « Принцессы») поднимут настроение Вашим учащимся и украсят их школьные будни!
