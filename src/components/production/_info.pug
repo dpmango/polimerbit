@@ -23,8 +23,8 @@
         p.cooperation__info-main
           span Производственный потенциал Полимербыта по своим возможностям на несколько лет опережает ближайших конкурентов в России
           | , а по ряду своих инновационных разработок зачастую превосходит уровень компаний Западной Европы и США.
-      .cooperation__image
-        img(src='img/productionImg1.jpg' srcset='img/productionImg1@2x.jpg 2x')
+      .cooperation__image.scaler(style="padding-bottom: "+ (300/600)*100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1567858296/polimer/productionImg1.jpg)")
+        img(js-lazy data-src='img/productionImg1.jpg' data-srcset='img/productionImg1@2x.jpg 2x')
     .cooperation__row
       .cooperation__info
         .cooperation__icon
@@ -32,16 +32,16 @@
         p.cooperation__info-main
           span Производство компании построено на прочной инфраструктурной базе
           | , которая среди прочего включает в себя не имеющую аналогов систему охлаждения пресс-форм, систему автоматической подачи сырья, надежное энергообеспечение.
-      .cooperation__image
-        img(src='img/productionImg2.jpg' srcset='img/productionImg2@2x.jpg 2x')
+      .cooperation__image.scaler(style="padding-bottom: "+ (300/600)*100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1567858296/polimer/productionImg2.jpg)")
+        img(js-lazy data-src='img/productionImg2.jpg' data-srcset='img/productionImg2@2x.jpg 2x')
     p.production__prod На Полимербыте установлено современное оборудование итальянского и португальского производства.
   .production__slider-container
     .production__slider(js-slider)
       .swiper-wrapper
-        .swiper-slide.production__slide
-          img(src='img/productionSlider1.jpg' srcset='img/productionSlider1@2x.jpg 2x')
-        .swiper-slide.production__slide
-          img(src='img/productionSlider1.jpg' srcset='img/productionSlider1@2x.jpg 2x')
+        .swiper-slide.production__slide.scaler(style="padding-bottom: "+ (300/600)*100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1567858296/polimer/productionSlider1.jpg)")
+          img(js-lazy data-src='img/productionSlider1.jpg' data-srcset='img/productionSlider1@2x.jpg 2x')
+        .swiper-slide.production__slide.scaler(style="padding-bottom: "+ (300/600)*100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1567858296/polimer/productionSlider1.jpg)")
+          img(js-lazy data-src='img/productionSlider1.jpg' data-srcset='img/productionSlider1@2x.jpg 2x')
       .slider-arrow.slider-next
       .slider-arrow.slider-prev
   .production__information
