@@ -1,0 +1,390 @@
+.production
+  padding: 96px 0 0
+  .today__section
+    margin-top: 80px
+    margin-bottom: 35px
+  .today__item
+    width: calc(25% - 20px)
+    &-title
+      font-size: 80px
+      line-height: 80px
+    &-sub-title
+      font-size: 20px
+      line-height: 26px
+      margin-top: 3px
+  .cooperation__image
+    width: 60%
+  .cooperation__row
+    margin-top: 128px
+    &--reverse
+      margin-top: 0
+      .cooperation__image
+        width: 62%
+      .cooperation__info
+        padding-right: 0
+        max-width: 360px
+        margin-left: auto
+  &__prod
+    margin: 100px 0 40px
+    font-size: 30px
+    line-height: 39px
+    color: $colorPrimary
+    font-weight: 700
+    max-width: 500px
+
+  &__slider-container
+    margin: 0 auto
+    max-width: 1662px
+    padding: 0 70px
+
+  &__slider
+    overflow: hidden
+    position: relative
+
+  &__slide
+    font-size: 0
+    width: 100%
+    max-width: 1522px
+    img
+      width: 100%
+      height: auto
+
+  .slider-arrow
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background: #fff
+    z-index: 2
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    transition: all .25s $ease
+    cursor: pointer
+    &:after
+      position: absolute
+      display: block
+      content: ''
+      width: 10px
+      left: 50%
+      top: 50%
+      height: 10px
+      border: 2px solid #000
+      transform: translate(-50%, -50%) rotate(45deg)
+      transition: all .25s $ease
+    &:hover
+      background: $colorPrimary
+      &:after
+        border-color: #fff
+    &.slider-next
+      right: 32px
+      &:after
+        border-left: none
+        border-bottom: none
+        left: 45%
+    &.slider-prev
+      left: 32px
+      &:after
+        border-right: none
+        border-top: none
+        left: 55%
+  &__information
+    margin: 98px 0 0
+    &-grid
+      display: flex
+      padding-bottom: 40px
+      border-bottom: 1px solid #E0E0E0
+
+  &__left
+    max-width: 345px
+    margin-right: 170px
+    width: 100%
+    p
+      font-size: 18px
+      line-height: 28px
+      margin: 24px 0 0
+      span
+        font-weight: 700
+        color: $colorPrimary
+    &-item
+      &:last-child
+        margin-top: 20px
+    &-icon
+      font-size: 0
+      color: transparent
+      .ico
+        font-size: 90px
+      &--big
+        .ico
+          font-size: 128px
+
+  &__right
+    padding-top: 114px
+    p
+      font-size: 18px
+      line-height: 28px
+      color: #4F4F4F
+      max-width: 625px
+      margin: 0 0 1.5em
+
+
+
++r($hd)
+  .production
+    padding: 72px 0 0
+    .today__section
+      margin-top: 72px
+      margin-bottom: 25px
+    .today__item
+      &-title
+        font-size: 74px
+        line-height: 90px
+      &-sub-title
+        margin-top: 0
+    .today__row
+      padding-bottom: 50px
+    .cooperation__image
+      width: 59%
+    .cooperation__row
+      margin-top: 95px
+      &--reverse
+        margin-top: 0
+        .cooperation__info
+          padding-left: 30px
+          padding-right: 0
+    &__prod
+      margin: 100px 0 28px
+      font-size: 26px
+      line-height: 34px
+      max-width: 420px
+
+    &__information
+      margin-top: 70px
+
+    &__left
+      max-width: 325px
+      margin-right: 60px
+      p
+        font-size: 16px
+        line-height: 24px
+      &-icon
+        .ico
+          font-size: 82px
+        &--big
+          .ico
+            font-size: 109px
+
+    &__right
+      padding-top: 106px
+      max-width: 470px
+      p
+        font-size: 16px
+        line-height: 24px
+
++r($xl)
+  .production
+    padding: 60px 0 0
+    .cooperation__text
+      max-width: 80%
+    .today__section
+      margin-top: 50px
+    .today__item
+      padding-bottom: 14px
+      &-title
+        font-size: 60px
+        line-height: 78px
+      &-sub-title
+        font-size: 16px
+        line-height: 21px
+        margin-top: 0px
+    .cooperation__image
+      width: 63%
+    .cooperation__info
+      width: 35%
+    .cooperation__row
+      margin-top: 60px
+      margin-bottom: 60px
+      &--reverse
+        margin-top: 0
+        .cooperation__image
+          width: 63%
+        .cooperation__info
+          padding-left: 0
+
+    &__prod
+      font-size: 24px
+      line-height: 31px
+      margin: 80px 0 25px
+      max-width: 500px
+
+    &__slider-container
+      padding: 0 40px
+
+    &__information
+      margin-top: 72px
+      .container--team
+        max-width: 100%
+
+    &__left
+      max-width: 260px
+      p
+        font-size: 14px
+        line-height: 20px
+        margin-top: 18px
+      &-icon
+        .ico
+          font-size: 69px
+        &--big
+          .ico
+            font-size: 94px
+
+    &__right
+      padding-top: 88px
+      max-width: 80%
+      p
+        font-size: 16px
+        line-height: 24px
+
+
++r($lg)
+  .production
+    padding: 57px 0 0
+    .today__section
+      margin-top: 40px
+      margin-bottom: 22px
+    .today__item
+      padding-bottom: 10px
+      &-title
+        font-size: 50px
+        line-height: 65px
+      &-sub-title
+        font-size: 14px
+        line-height: 18px
+    .today__row
+      padding-bottom: 25px
+    .cooperation__image
+      width: 53%
+    .cooperation__info
+      width: 40%
+    .cooperation__row
+      margin-top: 55px
+      margin-bottom: 55px
+      &--reverse
+        margin-top: 0
+        .cooperation__image
+          width: 53%
+        .cooperation__info
+          padding-left: 0
+
+    &__prod
+      font-size: 20px
+      line-height: 26px
+      margin: 50px 0 25px
+      max-width: 500px
+
+    &__slider-container
+      padding: 0 24px
+
+    .slider-arrow
+      width: 32px
+      height: 32px
+      &:after
+        width: 8px
+        height: 8px
+      &.slider-next
+        right: 16px
+      &.slider-prev
+        left: 16px
+
+    &__information
+      margin-top: 55px
+
+    &__left
+      margin-right: 47px
+      p
+        line-height: 22px
+
+    &__right
+      padding-top: 88px
+      max-width: 50%
+      p
+        font-size: 14px
+        line-height: 22px
+
++r($md)
+  .production
+    padding: 40px 0 0
+    .cooperation__text
+      max-width: 100%
+    .today__section
+      max-width: 200px
+      margin-bottom: 15px
+    .today__item
+      width: calc(50% - 8px)
+      margin: 0 4px 18px
+      min-width: 1px
+    .today__row
+      margin: 0 -4px
+      width: calc(100% + 8px)
+      padding-bottom: 40px
+
+    .cooperation__image
+      width: 100%
+    .cooperation__info
+      width: 100%
+      max-width: 100%
+      &-main
+        margin-top: 16px
+    .cooperation__row
+      margin-top: 53px
+      margin-bottom: 53px
+      &--reverse
+        margin-top: 0
+        .cooperation__image
+          width: 100%
+        .cooperation__info
+          padding-left: 0
+          max-width: 100%
+
+    &__prod
+      font-size: 18px
+      line-height: 23px
+      margin-top: 56px
+      margin-bottom: 25px
+
+    &__slider-container
+      padding: 0 16px
+
+    .slider-arrow
+      width: 24px
+      height: 24px
+      &:after
+        width: 6px
+        height: 6px
+        border-width: 1px
+
+    &__information
+      margin-top: 0px
+      &-grid
+        flex-direction: column
+        padding-bottom: 10px
+
+    &__left
+      margin-right: 47px
+      width: 100%
+      max-width: 100%
+      margin-right: 0
+      &-item
+        margin-top: 24px
+        &:last-child
+          margin-top: 24px
+          p
+            line-height: 20px
+
+    &__right
+      padding-top: 40px
+      max-width: 100%
+      width: 100%
+      p
+        font-size: 14px
+        line-height: 22px

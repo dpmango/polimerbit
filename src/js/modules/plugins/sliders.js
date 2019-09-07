@@ -29,24 +29,24 @@
       // EXAMPLE SWIPER
       new Swiper('[js-slider]', {
         wrapperClass: 'swiper-wrapper',
-        slideClass: 'example-slide',
+        slideClass: 'swiper-slide',
         direction: 'horizontal',
-        loop: false,
-        watchOverflow: true,
-        setWrapperSize: false,
+        loop: true,
+        // watchOverflow: true,
+        // setWrapperSize: false,
         spaceBetween: 0,
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         // loop: true,
-        normalizeSlideIndex: true,
-        // centeredSlides: true,
-        freeMode: true,
+        // normalizeSlideIndex: true,
+        centeredSlides: true,
+        // freeMode: true,
         // effect: 'fade',
-        autoplay: {
-          delay: 5000,
-        },
+        // autoplay: {
+        //   delay: 5000,
+        // },
         navigation: {
-          nextEl: '.example-next',
-          prevEl: '.example-prev',
+          nextEl: '.slider-next',
+          prevEl: '.slider-prev',
         },
         breakpoints: {
           // when window width is <= 992px

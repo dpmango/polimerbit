@@ -1,0 +1,281 @@
+.production
+  &__graph
+    padding: 95px 0 320px
+    .today__section
+      margin: 0
+
+  &__graph-bg
+    font-size: 0
+    color: transparent
+    margin: -24px -95px 0
+    width: calc(100% + 190px)
+    .ico
+      font-size: 518px
+    &--xl
+      display: none
+
+  &__graph-container
+    position: relative
+
+  &__graph-item
+    padding-top: 37px
+    max-width: 240px
+    position: absolute
+    left: 0
+    top: 0
+    &::before
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      display: block
+      position: absolute
+      content: ''
+      left: 2px
+      top: -3px
+      background: $colorPrimary
+    p
+      font-size: 18px
+      line-height: 28px
+      margin: 0
+      span
+        font-size: 20px
+
+    &:nth-of-type(3)
+      top: 0
+      left: 385px
+
+    &:nth-of-type(4)
+      top: 0
+      left: 770px
+
+    &:nth-of-type(5)
+      top: 256px
+      left: 129px
+
+    &:nth-of-type(6)
+      top: 256px
+      left: 385px
+
+    &:nth-of-type(7)
+      top: 256px
+      left: 642px
+
+    &:nth-of-type(8)
+      top: 256px
+      left: 899px
+
+    &:nth-of-type(9)
+      top: 513px
+      left: 257px
+
+    &:nth-of-type(10)
+      top: 513px
+      left: 514px
+
+    &:last-child
+      top: 511px
+      left: 899px
+      padding-top: 0
+      padding-left: 38px
+      p
+        font-size: 26px
+        line-height: 34px
+        font-weight: 700
+      .production__graph-icon
+        .ico
+          font-size: 102px
+
+
+
+  &__graph-icon
+    font-size: 0
+    color: transparent
+    margin-top: 7px
+    .ico
+      font-size: 80px
+
+
++r($hd)
+  .production
+    &__graph
+      padding: 98px 0 270px
+    &__graph-bg
+      margin: -13px -95px 0
+      width: calc(100% + 190px)
+      &--hd
+        display: none
+      &--xl
+        display: block
+
+    &__graph-item
+      p
+        font-size: 18px
+        line-height: 23px
+      &:nth-of-type(3)
+        left: 291px
+      &:nth-of-type(4)
+        left: 581px
+      &:nth-of-type(5)
+        left: 1px
+      &:nth-of-type(6)
+        left: 194px
+      &:nth-of-type(7)
+        left: 387px
+      &:nth-of-type(8)
+        left: 677px
+      &:nth-of-type(9)
+        left: 97px
+      &:nth-of-type(10)
+        left: 387px
+      &:last-child
+        top: 497px
+        left: 678px
+        p
+          font-size: 24px
+          line-height: 31px
+        &::before
+          top: 13px
+        .production__graph-icon
+          margin-top: 32px
+    &__graph-icon
+      margin-top: 15px
+
++r($xl)
+  .production
+    &__graph
+      padding: 72px 0 95px
+      .container
+        max-width: 100%
+      .today__section
+        br
+          display: none
+    &__graph-container
+      display: flex
+      padding-top: 29px
+      overflow-x: auto
+      padding-bottom: 40px
+    &__graph-bg
+      display: none
+    &__graph-scroll
+      max-height: 210px
+      overflow: hidden
+      margin: 0 -40px
+      width: calc(100% + 80px)
+      position: relative
+      &::before
+        position: absolute
+        display: block
+        content: ''
+        background: url(../img/graphLine.svg) center center repeat-x
+        width: 100%
+        top: 30px
+        left: 40px
+        height: 4px
+        background-size: cover
+      &::after
+        position: absolute
+        display: block
+        content: ''
+        background: #f9f9f9
+        width: 40px
+        top: 26px
+        right: 0
+        height: 10px
+    &__graph-item
+      position: relative
+      left: 0
+      top: 0
+      max-width: 100%
+      margin-right: 72px
+      flex: 0 0 auto
+      &:nth-of-type(3)
+        top: auto
+        left: auto
+        margin-left: 40px
+      &:nth-of-type(4)
+        top: auto
+        left: auto
+      &:nth-of-type(5)
+        top: auto
+        left: auto
+      &:nth-of-type(6)
+        top: auto
+        left: auto
+      &:nth-of-type(7)
+        top: auto
+        left: auto
+      &:nth-of-type(8)
+        top: auto
+        left: auto
+      &:nth-of-type(9)
+        top: auto
+        left: auto
+      &:nth-of-type(10)
+        top: auto
+        left: auto
+      &:last-child
+        top: auto
+        left: auto
+        padding-top: 37px
+        padding-left: 0
+        padding-right: 40px
+        &:before
+          top: -3px
+        p
+          font-size: 16px
+          line-height: 24px
+        .production__graph-icon
+          margin-top: 15px
+          .ico
+            font-size: 80px
+      p
+        font-size: 16px
+        line-height: 24px
+
++r($lg)
+  .production
+    &__graph
+      padding: 57px 0 85px
+    &__graph-container
+      padding-top: 21px
+    &__graph-scroll
+      margin: 0 -24px
+      width: calc(100% + 48px)
+      &:before
+        left: 16px
+        top: 21px
+      &:after
+        right: 0
+        top: 18px
+        width: 24px
+    &__graph-item
+      p
+        font-size: 14px
+        line-height: 22px
+      &:nth-of-type(3)
+        top: auto
+        left: auto
+        margin-left: 24px
+
++r($md)
+  .production
+    &__graph
+      padding: 38px 0 85px
+    &__graph-scroll
+      margin: 0 -16px
+      width: calc(100% + 32px)
+      &:before
+        left: 16px
+        top: 21px
+      &:after
+        right: 0
+        top: 18px
+        width: 16px
+    &__graph-item
+      p
+        font-size: 16px
+        line-height: 21px
+      &:nth-of-type(3)
+        top: auto
+        left: auto
+        margin-left: 16px
