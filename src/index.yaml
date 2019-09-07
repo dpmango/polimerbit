@@ -4,19 +4,19 @@ PageList:
   - file: homepage.html
     ready: 80
   - file: history.html
-    ready: 25
+    ready: 0
   - file: production.html
     ready: 25
   - file: polimer-today.html
     ready: 80
   - file: cooperation.html
-    ready: 70
+    ready: 80
   - file: contact-prod.html
-    ready: 25
+    ready: 0
   - file: materials.html
     ready: 80
   - file: contacts.html
-    ready: 70
+    ready: 80
   - file: news-article.html
     ready: 80
   - file: 404.html
