@@ -4,7 +4,7 @@
 (function($, APP) {
   APP.Plugins.Tooltip = {
     init: function() {
-      $('.tooltipstered').tooltipster();
+      // $('.tooltipstered').tooltipster();
     },
   };
 })(jQuery, window.APP);

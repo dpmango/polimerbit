@@ -10,7 +10,7 @@ PageList:
   - file: polimer-today.html
     ready: 80
   - file: cooperation.html
-    ready: 25
+    ready: 70
   - file: contact-prod.html
     ready: 25
   - file: materials.html

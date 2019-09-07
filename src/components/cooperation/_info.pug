@@ -1,0 +1,63 @@
+// COOPERATION INFO
+.cooperation
+  .container.container--team
+    p.cooperation__text При всем масштабе своего производства компания имеет большую гибкость в части обеспечения поставок клиентам, не прекращает искать новые идеи и постоянно расширяет свой ассортимент.
+    .cooperation__row
+      .cooperation__info
+        .cooperation__icon
+          +svgColor('icon-assort')
+        p.cooperation__info-title Широкий ассортимент продукции.
+        p.cooperation__info-main Ассортиментная матрица Полимербыта насчитывает
+          span  более 700 артикулов в Перманентном ассортименте
+          | , состоящем из самых востребованных рынком и потребителями изделий. Основные характеристики ассортимента:
+          span  строгий контроль качества, регулярная актуализация внешнего вида изделий для соответствия текущим вкусам потребителей
+          | , неснижаемый складской запас для бесперебойных регулярных отгрузок.
+      .cooperation__image
+        img(src='img/cooperationImg1.jpg' srcset='img/cooperationImg1@2x.jpg 2x')
+    .cooperation__row.cooperation__row--reverse
+      .cooperation__info
+        .cooperation__icon
+          +svgColor('icon-high')
+        p.cooperation__info-title Высокий технологический уровень и качество продукции.
+        p.cooperation__info-main Наличие современной инфраструктуры,
+          span  высокая оснащенность новейшим оборудованием и пресс-формами
+          |  позволяет достигать необходимого уровня качества продукции и применять полный
+          span  набор разнообразных технологий изготовления изделий из пластмассы
+          |  (в том числе, двухкомпонентное литье, литье изделий сложной конфигурации, нанесение рисунков на изделия).
+      .cooperation__image
+        img(src='img/cooperationImg2.jpg' srcset='img/cooperationImg2@2x.jpg 2x')
+
+.cooperation__advantages
+  .container.container--team
+    .cooperation__grid
+      .cooperation__advantage
+        .cooperation__advantage-icon
+          +svgColor('icon-optimization')
+        p.cooperation__advantage-title Оптимизация издержек и привлекательность цен.
+        p.cooperation__advantage-main Один из самых низких в отрасли уровень издержек, обеспечиваемый современным оборудованием, отлаженными бизнес-процессами и масштабностью производства позволяет Полимербыту предлагать товар покупателям по наиболее выгодным для них ценам.
+      .cooperation__advantage
+        .cooperation__advantage-icon
+          +svgColor('icon-dist')
+        p.cooperation__advantage-title Способность выполнять требования дистрибуторов и розничных сетей.
+        p.cooperation__advantage-main Для дистрибуторов и розничных сетей критически важно наличие ассортимента на складе и полная комплектация заказов в сжатые сроки, иногда, в течение 2-3 дней.
+      .cooperation__advantage
+        .cooperation__advantage-icon
+          +svgColor('icon-points')
+        p.cooperation__advantage-title Расположение производства вблизи от основных рынков сбыта.
+        p.cooperation__advantage-main Производственные и складские мощности компании расположены в г. Москва и, тем самым, максимально приближены к основным рынкам сбыта, находящимся в Европейской части России.
+
+    .cooperation__separator
+    .cooperation__conditions
+      a.nav-link(href="#yur-popup" js-popup)
+        .nav-link__content
+          .nav-link__title Условия сотрудничества
+          .nav-link__name Для юридических лиц
+        .nav-link__icon
+          +svgMono('arrow-right')
+      a.nav-link(href="#ip-popup" js-popup)
+        .nav-link__content
+          .nav-link__title Условия сотрудничества
+          .nav-link__name Для индивидуальных предпринимателей
+        .nav-link__icon
+          +svgMono('arrow-right')
+

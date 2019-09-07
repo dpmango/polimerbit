@@ -1,0 +1,70 @@
+.modal-conditions
+  max-width: 562px
+  width: 100%
+  margin: auto
+  background: #fff
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1)
+  padding: 24px 32px 40px
+  border-radius: 8px
+  position: relative
+  .mfp-close
+    opacity: 1
+    width: 24px
+    height: 24px
+    top: 30px
+    right: 32px
+    line-height: 1
+  &__title
+    margin: 0
+    font-size: 26px
+    line-height: 37px
+    max-width: calc(100% - 70px)
+    width: 100%
+  &__sub-title
+    font-size: 16px
+    line-height: 21px
+    margin: 32px 0 0 0
+    color: #828282
+  &__list
+    margin: 0
+    padding: 10px 0 0
+    li
+      font-size: 16px
+      line-height: 21px
+      margin-top: 14px
+      padding-left: 22px
+      position: relative
+      width: 100%
+      counter-increment: ol-counter
+      &:before
+        position: absolute
+        content: counter(ol-counter)
+        left: 0
+        top: 0px
+        font-size: 16px
+        line-height: 21px
+        color: $colorGreen
+        font-weight: 700
+
++r($md)
+  .modal-conditions
+    padding: 24px
+    .mfp-close
+      top: 26px
+      right: 20px
+    &__title
+      font-size: 20px
+      line-height: 28px
+    &__sub-title
+      font-size: 12px
+      line-height: 18px
+      margin: 24px 0 0 0
+    &__list
+      li
+        font-size: 14px
+        line-height: 18px
+        margin-top: 10px
+        padding-left: 18px
+        &:before
+          font-size: 14px
+          line-height: 18px
