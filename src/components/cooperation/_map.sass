@@ -1,5 +1,7 @@
 .cooperation-map
-  padding: 100px 0
+  padding: 130px 0 60px
+  .today__section
+    margin: 0 0 -40px
   &__map
     width: 100%
     svg
@@ -32,6 +34,8 @@
         background: #fff
 
 .map
+  &__tooltips
+    display: none
   &__tooltip
     padding: 24px
     background: #fff
@@ -40,6 +44,7 @@
     display: flex
     flex-direction: column
     max-width: 215px
+    // display: none
     &-title
       font-size: 20px
       line-height: 26px
@@ -68,3 +73,47 @@
         object-fit: cover
         width: 100%
         margin: auto
+
++r($hd)
+  .cooperation-map
+    padding: 90px 0 60px
+    .today__section
+      margin: 0 0 -30px
+
++r($xl)
+  .cooperation-map
+    padding: 80px 0 50px
+    .container
+      max-width: 100%
+    .today__section
+      margin: 0
+
++r($lg)
+  .cooperation-map
+    padding: 57px 0 35px
+    .today__section
+      margin: 0 0 20px
+
++r($md)
+  .cooperation-map
+    padding: 30px 0 50px
+    .today__section
+      margin: 0 0 10px
+  .map
+    &__tooltip
+      padding: 12px
+      max-width: 140px
+      &-title
+        font-size: 16px
+        line-height: 21px
+      &-row
+        margin-top: 6px
+        p
+          font-size: 12px
+          line-height: 18px
+      &-image
+        width: 40px
+        min-width: 40px
+        height: 35px
+        padding: 7px
+        margin-right: 8px

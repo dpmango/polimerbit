@@ -4,7 +4,11 @@
 (function($, APP) {
   APP.Plugins.Tooltip = {
     init: function() {
-      // $('.tooltipstered').tooltipster();
+      var schemeOptions = {
+        side: 'top',
+      };
+
+      $('.tooltipstered').tooltipster(schemeOptions);
     },
   };
 })(jQuery, window.APP);
