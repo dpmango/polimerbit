@@ -2,30 +2,30 @@
   .container.container--full
     .contacts__grid
       .contacts__left
-        p.contacts__title Главный офис
+        p.contacts__title(data-aos="fade-up") Главный офис
         .contacts__row
-          .contacts__col
+          .contacts__col(data-aos="fade-up" data-aos-delay="100")
             .contacts__item
               .contacts__icon
                 +svgColor('icon-map')
               p 109202, г. Москва.
                 br
                 | 2-я Карачаровская ул., д. 3
-          .contacts__col
+          .contacts__col(data-aos="fade-up" data-aos-delay="150")
             .contacts__item
               .contacts__icon
                 +svgColor('icon-phone')
               a(href="tel:+74991710605") +7 (499) 171-06-05
-          .contacts__col
+          .contacts__col(data-aos="fade-up" data-aos-delay="200")
             .contacts__item
               .contacts__icon
                 +svgColor('icon-mail')
               a(href="mailto:info@polimerbyt.ru") info@polimerbyt.ru
-        .contacts__map
+        .contacts__map(data-aos="fade-left")
           .js-ymap(data-center="55.733001, 37.754790" data-placeholder="55.733001, 37.754790" data-zoom="13" data-placeholder-caption="Офис" data-placeholder-balloon="109202, г. Москва. 2-я Карачаровская ул., д. 3")
       .contacts__right
-        p.contacts__title Кого вы представляете?
-        .contacts__right-content
+        p.contacts__title(data-aos="fade-up") Кого вы представляете?
+        .contacts__right-content(data-aos="fade-up" data-aos-delay="200")
           .contacts__radio
             .ui-checkbox
               label Федеральная сеть
