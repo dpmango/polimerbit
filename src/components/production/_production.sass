@@ -14,6 +14,19 @@
       margin-top: 3px
   .cooperation__image
     width: 60%
+    min-height: 650px
+    position: relative
+    img, picture, video
+      position: relative
+      z-index: 1
+      flex: 1 1 auto
+      width: 100%
+      height: 100%
+      object-fit: cover
+  .cooperation__video
+    position: absolute 0
+    height: 100%
+    width: 100%
   .cooperation__row
     margin-top: 128px
     &--reverse
@@ -145,6 +158,7 @@
       padding-bottom: 50px
     .cooperation__image
       width: 59%
+      min-height: 560px
     .cooperation__row
       margin-top: 95px
       &--reverse
@@ -199,6 +213,7 @@
         margin-top: 0px
     .cooperation__image
       width: 63%
+      min-height: 500px
     .cooperation__info
       width: 35%
     .cooperation__row
@@ -330,6 +345,9 @@
 
     .cooperation__image
       width: 100%
+      min-height: 1px
+    .cooperation__video
+      position: relative
     .cooperation__info
       width: 100%
       max-width: 100%

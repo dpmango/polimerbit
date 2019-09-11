@@ -14,6 +14,8 @@
         this.getHeaderParams();
         this.hamburgerClickListener();
         this.mobileNaviClickListener();
+        this.listenScroll();
+        this.listenResize();
       }
 
       this.setMenuClass();
@@ -32,6 +34,7 @@
     closeMobileMenu: function(isOnload) {
       $('[js-hamburger]').removeClass('is-active');
       $('.mobile-navi').removeClass('is-active');
+      $('.header').removeClass('is-active');
 
       APP.Plugins.ScrollBlock.blockScroll(isOnload);
     },
@@ -39,6 +42,7 @@
       _document.on('click', '[js-hamburger]', function() {
         $(this).toggleClass('is-active');
         $('.mobile-navi').toggleClass('is-active');
+        $('.header').toggleClass('is-active');
 
         APP.Plugins.ScrollBlock.blockScroll();
       });
@@ -59,6 +63,28 @@
           }
         }
       });
+    },
+    listenScroll: function() {
+      _window.on('scroll', this.scrollHeader.bind(this));
+    },
+    listenResize: function() {
+      _window.on('resize', debounce(this.getHeaderParams.bind(this), 100));
+    },
+    scrollHeader: function() {
+      if (this.data.header.container !== undefined) {
+        var fixedClass = 'is-fixed';
+
+        // get scroll params from blocker function
+        var scroll = APP.Plugins.ScrollBlock.getData();
+
+        if (scroll.blocked) return;
+
+        if (scroll.y > 0) {
+          this.data.header.container.addClass(fixedClass);
+        } else {
+          this.data.header.container.removeClass(fixedClass);
+        }
+      }
     },
     setMenuClass: function() {
       // SET ACTIVE CLASS IN HEADER

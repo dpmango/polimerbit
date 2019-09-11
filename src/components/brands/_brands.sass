@@ -2,6 +2,29 @@
 .brands
   padding: 70px 0 175px
   background: #fff
+  position: relative
+  overflow: hidden
+  &--hover
+    *
+      color: #fff !important
+    .brand-card__image--color
+      display: none
+    .brand-card__image-hover
+      display: block
+  &__bg
+    position: absolute 0
+    z-index: 1
+    display: flex
+    flex-direction: column
+    font-size: 0
+    display: none
+    img
+      position: relative
+      z-index: 1
+      flex: 1 1 auto
+      width: 100%
+      height: 100%
+      object-fit: cover
   &__title
     // TODO - possibly typography class
     font-weight: bold
@@ -24,6 +47,12 @@
     flex-direction: column
   .btn
     display: none
+    max-width: 115px
+    margin: 15px auto 0
+
+  &__content
+    position: relative
+    z-index: 2
 
 // brand card
 .brand-card
@@ -33,17 +62,27 @@
   text-align: center
   max-width: 365px
   margin: 0 auto
+  position: relative
   &__image
     flex: 0 0 auto
     padding-bottom: 35px
     img
       max-width: 100%
+    .ico
+      font-size: 120px
+      color: #0BA14B
+    &-hover
+      display: none
   &__description
-    margin-top: auto
+    // margin-top: auto
     font-size: 18px
     line-height: 1.55
     text-align: center
     color: #4F4F4F
+  &:hover
+    margin-top: -49px
+    .btn
+      display: inline-block
 
 +r($hd)
   .brands
@@ -77,6 +116,8 @@
       padding-bottom: 12px
       img
         height: 75px
+      .ico
+        font-size: 75px
 
 +r($lg)
   .brands
@@ -111,3 +152,5 @@
       font-size: 11px
       line-height: 16px
       text-align: left
+    &:hover
+      margin-top: 0
