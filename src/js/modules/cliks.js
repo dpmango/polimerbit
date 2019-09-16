@@ -61,13 +61,17 @@
           var _value = $(this).val();
           var $consultantUnknown = $('.contacts__person-unknown');
           var $consultant = $('.contacts__person');
+
           if (_value !== 'val0') {
             $consultantUnknown.removeClass('is-visible');
             $consultant.addClass('is-visible');
+
           } else {
             $consultant.removeClass('is-visible');
             $consultantUnknown.addClass('is-visible');
           }
+
+          // console.log(_value, _personIndex);
         })
 
         // pagination
