@@ -50,7 +50,6 @@
 
         .on('change', '.ui-checkbox', function() {
           var $select = $('.contacts__select');
-          console.log($select);
           if ($('.ui-checkbox').find("input[type='radio']:checked").length) {
             $select.addClass('is-visible');
           } else {

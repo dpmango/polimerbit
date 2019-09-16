@@ -3,67 +3,71 @@
 //////////
 (function($, APP) {
   APP.Components.Nav = {
+    data: {
+      offsetHeight: undefined,
+      paginationAnchors: [],
+      historySections: [],
+    },
     init: function() {
+      this.getHistorySections();
+      this.clickListeners();
+      this.listenScroll();
+    },
+    getHistorySections: function() {
+      var $page = $('.page').last();
+      this.data.offsetHeight = $('.header').outerHeight() + $('.history-nav').outerHeight();
+      this.data.paginationAnchors = $page.find('.history-nav__list a');
+      this.data.historySections = $page.find('[data-section]');
+    },
+    clickListeners: function() {
+      var _this = this;
 
       $(document).on('click', '.history-nav__list a', function() {
-          // section scroll
-          var el = $(this).attr('href');
+        var dataSectionFor = $(this).data('for-section');
+        var el = $('[data-section="' + dataSectionFor + '"]');
 
-          var topTarget = $(el).offset().top;
-          var height = $(".header").outerHeight() +  $(".history-nav").outerHeight();
-
-          // $('body, html').animate({scrollTop: topTarget}, 1000);
-          TweenLite.to(window, 1, {
-            scrollTo: { y: topTarget - height, autoKill: false },
-            ease: easingSwing,
-          });
-
-          $('.history-nav__list a').removeClass('is-active');
-          $(this).addClass('is-active');
-
-          return false;
+        var topTarget = $(el).offset().top;
+        TweenLite.to(window, 1, {
+          scrollTo: { y: topTarget - _this.data.offsetHeight, autoKill: false },
+          ease: easingSwing,
         });
 
-        // getPaginationSections();
-        // pagination();
+        $('.history-nav__list a').removeClass('is-active');
+        $(this).addClass('is-active');
 
-        // //////////
-        // // PAGINATION
-        // //////////
-        // var paginationAnchors, sections;
-
-        // function getPaginationSections() {
-        //   paginationAnchors = $(".history-nav__list a");
-        //   sections = $(".page__content [data-section]");
-        // }
-
-        // function pagination() {
-        //   // Cache selectors
-        //   var headerHeight = $(".header").outerHeight() +  $(".history-nav").outerHeight();
-        //   var vScroll = _window.scrollTop();
-
-        //   if (sections.length === 0) {
-        //     paginationAnchors.removeClass("is-active");
-        //     return false;
-        //   }
-
-        //   // Get id of current scroll item
-        //   var cur = sections.map(function() {
-        //     if ($(this).offset().top <= vScroll + headerHeight / 0.99) return this;
-        //   });
-        //   // Get current element
-        //   cur = $(cur[cur.length - 1]);
-        //   var id = cur && cur.length ? cur.data("section") : "1";
-
-        //   // Set/remove active class
-        //   paginationAnchors
-        //     .removeClass("is-active")
-        //     .filter("[data-section='" + id + "']")
-        //     .addClass("is-active");
-        // }
+        return false;
+      });
     },
-    destroy: function() {
-      // ... code ...
+    listenScroll: function() {
+      _window.on('scroll', throttle(this.scrollHistoryNav.bind(this), 25));
+    },
+    scrollHistoryNav: function() {
+      var _this = this;
+
+      // get scroll params from blocker function
+      var scroll = APP.Plugins.ScrollBlock.getData();
+      if (scroll.blocked) return;
+
+      // clear all active if no sections found
+      if (_this.data.historySections.length === 0) {
+        _this.data.paginationAnchors.removeClass('is-active');
+        return false;
+      }
+
+      // Get id of current scroll item
+      var cur = _this.data.historySections.map(function() {
+        if ($(this).offset().top <= scroll.y + _this.data.offsetHeight / 0.99) return this;
+      });
+
+      // Get current element
+      cur = $(cur[cur.length - 1]);
+      var id = cur && cur.length ? cur.data('section') : '0';
+
+      // Set/remove active class
+      _this.data.paginationAnchors
+        .removeClass('is-active')
+        .filter("[data-for-section='" + id + "']")
+        .addClass('is-active');
     },
   };
 })(jQuery, window.APP);
