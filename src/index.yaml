@@ -4,7 +4,7 @@ PageList:
   - file: homepage.html
     ready: 80
   - file: history.html
-    ready: 0
+    ready: 50
   - file: production.html
     ready: 80
   - file: polimer-today.html

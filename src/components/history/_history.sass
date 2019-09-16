@@ -1,0 +1,181 @@
+// HISTORY
+.history
+
+  &__row
+    margin: 72px 0 120px
+    display: flex
+    align-items: flex-start
+
+    &--reverse
+      flex-direction: row-reverse
+      .history__info
+        margin-left: 1.5%
+        margin-right: auto
+
+    &--margin
+      margin: 164px 0 150px
+
+  &__image
+    max-width: 562px
+    width: 49%
+    position: relative
+
+    &-container
+      width: 100%
+      font-size: 0
+      &--absolute
+        position: absolute
+
+      img
+        width: 100%
+
+      p
+        font-size: 12px
+        line-height: 1.35
+        color: #828282
+        margin: 8px 0 0
+        font-style: italic
+        width: 100%
+
+  &__info
+    width: 48%
+    margin-left: auto
+    padding-top: 5px
+    &-content
+      max-width: 365px
+      margin: 0 auto
+
+    &--middle
+      width: 100%
+      text-align: center
+      margin-top: 35px
+
+  &__date
+    margin: 0
+    font-size: 50px
+    line-height: 1.15
+    color: $colorPrimary
+    &--white
+      color: #fff
+
+  &__title
+    margin: 18px 0 0
+    font-size: 20px
+    line-height: 1.3
+    &--white
+      color: #fff
+
+  &__description
+    margin: 16px 0 0
+    font-size: 14px
+    line-height: 1.6
+    color: #333
+    &--white
+      color: #fff
+
+  &__full
+    position: relative
+    overflow: hidden
+
+  &__bg
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    font-size: 0
+    img
+      position: relative
+      z-index: 1
+      flex: 1 1 auto
+      width: auto
+      height: 100%
+      min-height: 100%
+      max-width: 65%
+      object-fit: cover
+
+  &__content
+    position: relative
+    z-index: 2
+    margin: -20px 0
+    padding: 24px 0 35px
+
+
+
+
++r($xl)
+  .history
+
++r($lg)
+  .history
+
+
++r($md)
+  .history
+    padding: 12px 0 96px
+    &__row
+      margin: 44px 0 0
+      flex-direction: column
+      &--reverse
+        .history__info
+          margin: 0
+    &__info
+      width: 100%
+      &-content
+        max-width: 100%
+      &--middle
+        text-align: left
+        margin-top: -1px
+        .history__info-content
+          max-width: 100% !important
+          p
+            width: calc(100% + 5px)
+    &__date
+      font-size: 40px
+      line-height: 1.3
+
+    &__image
+      display: none
+      width: 100%
+      &-container
+        margin-top: 24px
+        overflow: hidden
+        p
+          font-size: 11px
+          line-height: 1.3
+          margin-top: 8px
+          max-width: 100% !important
+
+    &__date
+      &--white
+        color: $colorPrimary
+
+    &__title
+      font-size: 14px
+      line-height: 1.6
+      margin: 8px 0 0
+      &--white
+        color: $fontColor
+
+    &__description
+      font-size: 12px
+      line-height: 1.7
+      margin-top: 24px
+      &--white
+        color: #333333
+      &--mt8
+        margin-top: 8px
+
+    &__content
+      margin: 0
+      padding: 0
+
+    &__full
+      img
+        width: 114%
+
+    &__bg
+      display: none
+
+
+
