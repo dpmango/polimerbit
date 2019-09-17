@@ -49,29 +49,45 @@
         })
 
         .on('change', '.ui-checkbox', function() {
+          var _valueCheckbox = $(this).find("input[type='radio']").val();
           var $select = $('.contacts__select');
+
+          var $consultant = $('.contacts__person');
+          var $consultantUnknown = $('.contacts__person-unknown');
+
           if ($('.ui-checkbox').find("input[type='radio']:checked").length) {
-            $select.addClass('is-visible');
-          } else {
+
             $select.removeClass('is-visible');
+            $consultant.removeClass('is-visible');
+            $consultantUnknown.addClass('is-visible');
+            $("[data-select='" + _valueCheckbox + "']").addClass('is-visible');
+
+          } else {
+
+            $select.removeClass('is-visible');
+
           }
         })
 
         .on('change', '.contacts__select select[js-select]', function() {
           var _value = $(this).val();
+
           var $consultantUnknown = $('.contacts__person-unknown');
           var $consultant = $('.contacts__person');
 
           if (_value !== 'val0') {
+
             $consultantUnknown.removeClass('is-visible');
-            $consultant.addClass('is-visible');
+            $consultant.removeClass('is-visible');
+            $("[data-person='" + _value + "']").addClass('is-visible');
 
           } else {
+
             $consultant.removeClass('is-visible');
             $consultantUnknown.addClass('is-visible');
+
           }
 
-          // console.log(_value, _personIndex);
         })
 
         // pagination

@@ -29,25 +29,43 @@
           .contacts__radio
             .ui-checkbox
               label Федеральная сеть
-                input(type="radio", name="group1")
+                input(type="radio", name="group1" value="select-1")
                 span
             .ui-checkbox
               label Локальная сеть
-                input(type="radio", name="group1")
+                input(type="radio", name="group1" value="select-2")
                 span
             .ui-checkbox
               label Дистрибьютора
-                input(type="radio", name="group1")
+                input(type="radio", name="group1" value="select-3")
                 span
 
-          .contacts__select
+          .contacts__select(data-select="select-1")
             select(js-select)
-              option(value="val0") Ваш регион
-              option(value="val1") СНГ
-              option(value="val2") ЦФО
-              option(value="val3") СЗФО
-              option(value="val4") УРФО
-              option(value="val5") СФО
+              option(value="val1-0") Ваш регион (Фед.)
+              option(value="val1-1") СНГ (Фед.)
+              option(value="val1-2") ЦФО (Фед.)
+              option(value="val1-3") СЗФО (Фед.)
+              option(value="val1-4") УРФО (Фед.)
+              option(value="val1-5") СФО (Фед.)
+
+          .contacts__select(data-select="select-2")
+            select(js-select)
+              option(value="val2-0") Ваш регион (Лок.)
+              option(value="val2-1") СНГ (Лок.)
+              option(value="val2-2") ЦФО (Лок.)
+              option(value="val2-3") СЗФО (Лок.)
+              option(value="val2-4") УРФО (Лок.)
+              option(value="val2-5") СФО (Лок.)
+
+          .contacts__select(data-select="select-3")
+            select(js-select)
+              option(value="val3-0") Ваш регион (Дист.)
+              option(value="val3-1") СНГ (Дист.)
+              option(value="val3-2") ЦФО (Дист.)
+              option(value="val3-3") СЗФО (Дист.)
+              option(value="val3-4") УРФО (Дист.)
+              option(value="val3-5") СФО (Дист.)
 
           .contacts__separator
           .contacts__person-unknown.is-visible
@@ -57,55 +75,165 @@
               p Для отображения контакта
                 br
                 | выберите сеть
-          .contacts__person
+          .contacts__person(data-person="val1-1")
             .contacts__person-image
               img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
             .contacts__person-info
-              p Макаренко Ирина
+              p Макаренко Ирина СНГ (Фед.)
               a(href="tel:+74991710605")
                 +svgColor('icon-phone-c')
                 | +7 (499) 171-06-05
               a(href="mailto:info@polimerbit.ru")
                 +svgColor('icon-mail-c')
                 | info@polimerbit.ru
-          .contacts__person
+          .contacts__person(data-person="val1-2")
             .contacts__person-image
               img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
             .contacts__person-info
-              p Макаренко Ирина
+              p Макаренко Ирина ЦФО (Фед.)
               a(href="tel:+74991710605")
                 +svgColor('icon-phone-c')
                 | +7 (499) 171-06-05
               a(href="mailto:info@polimerbit.ru")
                 +svgColor('icon-mail-c')
                 | info@polimerbit.ru
-          .contacts__person
+          .contacts__person(data-person="val1-3")
             .contacts__person-image
               img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
             .contacts__person-info
-              p Макаренко Ирина
+              p Макаренко Ирина СЗФО (Фед.)
               a(href="tel:+74991710605")
                 +svgColor('icon-phone-c')
                 | +7 (499) 171-06-05
               a(href="mailto:info@polimerbit.ru")
                 +svgColor('icon-mail-c')
                 | info@polimerbit.ru
-          .contacts__person
+          .contacts__person(data-person="val1-4")
             .contacts__person-image
               img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
             .contacts__person-info
-              p Макаренко Ирина
+              p Макаренко Ирина УРФО (Фед.)
               a(href="tel:+74991710605")
                 +svgColor('icon-phone-c')
                 | +7 (499) 171-06-05
               a(href="mailto:info@polimerbit.ru")
                 +svgColor('icon-mail-c')
                 | info@polimerbit.ru
-          .contacts__person
+          .contacts__person(data-person="val1-5")
             .contacts__person-image
               img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
             .contacts__person-info
-              p Макаренко Ирина
+              p Макаренко Ирина СФО (Фед.)
+              a(href="tel:+74991710605")
+                +svgColor('icon-phone-c')
+                | +7 (499) 171-06-05
+              a(href="mailto:info@polimerbit.ru")
+                +svgColor('icon-mail-c')
+                | info@polimerbit.ru
+          .contacts__person(data-person="val2-1")
+            .contacts__person-image
+              img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
+            .contacts__person-info
+              p Макаренко Ирина СНГ (Лок.)
+              a(href="tel:+74991710605")
+                +svgColor('icon-phone-c')
+                | +7 (499) 171-06-05
+              a(href="mailto:info@polimerbit.ru")
+                +svgColor('icon-mail-c')
+                | info@polimerbit.ru
+          .contacts__person(data-person="val2-2")
+            .contacts__person-image
+              img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
+            .contacts__person-info
+              p Макаренко Ирина ЦФО (Лок.)
+              a(href="tel:+74991710605")
+                +svgColor('icon-phone-c')
+                | +7 (499) 171-06-05
+              a(href="mailto:info@polimerbit.ru")
+                +svgColor('icon-mail-c')
+                | info@polimerbit.ru
+          .contacts__person(data-person="val2-3")
+            .contacts__person-image
+              img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
+            .contacts__person-info
+              p Макаренко Ирина СЗФО (Лок.)
+              a(href="tel:+74991710605")
+                +svgColor('icon-phone-c')
+                | +7 (499) 171-06-05
+              a(href="mailto:info@polimerbit.ru")
+                +svgColor('icon-mail-c')
+                | info@polimerbit.ru
+          .contacts__person(data-person="val2-4")
+            .contacts__person-image
+              img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
+            .contacts__person-info
+              p Макаренко Ирина УРФО (Лок.)
+              a(href="tel:+74991710605")
+                +svgColor('icon-phone-c')
+                | +7 (499) 171-06-05
+              a(href="mailto:info@polimerbit.ru")
+                +svgColor('icon-mail-c')
+                | info@polimerbit.ru
+          .contacts__person(data-person="val2-5")
+            .contacts__person-image
+              img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
+            .contacts__person-info
+              p Макаренко Ирина СФО (Лок.)
+              a(href="tel:+74991710605")
+                +svgColor('icon-phone-c')
+                | +7 (499) 171-06-05
+              a(href="mailto:info@polimerbit.ru")
+                +svgColor('icon-mail-c')
+                | info@polimerbit.ru
+          .contacts__person(data-person="val3-1")
+            .contacts__person-image
+              img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
+            .contacts__person-info
+              p Макаренко Ирина СНГ (Дист.)
+              a(href="tel:+74991710605")
+                +svgColor('icon-phone-c')
+                | +7 (499) 171-06-05
+              a(href="mailto:info@polimerbit.ru")
+                +svgColor('icon-mail-c')
+                | info@polimerbit.ru
+          .contacts__person(data-person="val3-2")
+            .contacts__person-image
+              img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
+            .contacts__person-info
+              p Макаренко Ирина ЦФО (Дист.)
+              a(href="tel:+74991710605")
+                +svgColor('icon-phone-c')
+                | +7 (499) 171-06-05
+              a(href="mailto:info@polimerbit.ru")
+                +svgColor('icon-mail-c')
+                | info@polimerbit.ru
+          .contacts__person(data-person="val3-3")
+            .contacts__person-image
+              img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
+            .contacts__person-info
+              p Макаренко Ирина СЗФО (Дист.)
+              a(href="tel:+74991710605")
+                +svgColor('icon-phone-c')
+                | +7 (499) 171-06-05
+              a(href="mailto:info@polimerbit.ru")
+                +svgColor('icon-mail-c')
+                | info@polimerbit.ru
+          .contacts__person(data-person="val3-4")
+            .contacts__person-image
+              img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
+            .contacts__person-info
+              p Макаренко Ирина УРФО (Дист.)
+              a(href="tel:+74991710605")
+                +svgColor('icon-phone-c')
+                | +7 (499) 171-06-05
+              a(href="mailto:info@polimerbit.ru")
+                +svgColor('icon-mail-c')
+                | info@polimerbit.ru
+          .contacts__person(data-person="val3-5")
+            .contacts__person-image
+              img(src='img/person3.jpg' srcset='img/person3@2x.jpg 2x')
+            .contacts__person-info
+              p Макаренко Ирина СФО (Дист.)
               a(href="tel:+74991710605")
                 +svgColor('icon-phone-c')
                 | +7 (499) 171-06-05
