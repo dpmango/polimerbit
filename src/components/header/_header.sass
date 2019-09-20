@@ -97,6 +97,15 @@
             background: #fff
           &:hover
             color: rgba(#fff, 0.8)
+      &__hamburger
+        .hamburger
+          background: #fff
+        .hamburger-inner
+          background: $colorPrimary
+          &::before,
+          &::after
+            background: $colorPrimary
+
   &.is-fixed
     // should be normalized to -100% scroll at this point
     position: fixed
@@ -111,6 +120,14 @@
       opacity: 1
       transform: translateY(0px)
       pointer-events: all
+    .header__hamburger
+      .hamburger
+        background: $colorPrimary
+      .hamburger-inner
+        background: #fff
+        &::before,
+        &::after
+          background: #fff
     &[data-modifier="is-white"]
       .header
         &__logo
@@ -130,6 +147,14 @@
       opacity: 0
       transform: translateY(-20px)
       pointer-events: none
+    .header__hamburger
+      .hamburger
+        background: $colorPrimary
+      .hamburger-inner
+        background: #fff
+        &::before,
+        &::after
+          background: #fff
 
 
 +rmin($hd)

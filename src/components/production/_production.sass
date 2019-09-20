@@ -13,7 +13,7 @@
       line-height: 26px
       margin-top: 3px
   .cooperation__image
-    width: 60%
+    width: 62%
     min-height: 650px
     position: relative
     img, picture, video
@@ -26,17 +26,20 @@
   .cooperation__video
     position: absolute 0
     height: 100%
-    width: 100%
+    width: calc(100% + 100px)
+    max-width: 880px
+    margin-right: -100px
   .cooperation__row
     margin-top: 128px
     &--reverse
       margin-top: 0
-      .cooperation__image
-        width: 62%
       .cooperation__info
         padding-right: 0
         max-width: 360px
         margin-left: auto
+      .cooperation__video
+        margin-left: -100px
+        margin-right: 0
   &__prod
     margin: 100px 0 40px
     font-size: 30px
@@ -129,7 +132,7 @@
         font-size: 90px
       &--big
         .ico
-          font-size: 128px
+          font-size: 124px
 
   &__right
     padding-top: 114px
@@ -216,6 +219,11 @@
       min-height: 500px
     .cooperation__info
       width: 35%
+
+    .cooperation__video
+      width: 100%
+      margin-left: 0
+
     .cooperation__row
       margin-top: 60px
       margin-bottom: 60px
@@ -225,6 +233,10 @@
           width: 63%
         .cooperation__info
           padding-left: 0
+
+        .cooperation__video
+          margin-right: 0
+          margin-left: 0
 
     &__prod
       font-size: 24px
@@ -278,18 +290,22 @@
     .today__row
       padding-bottom: 25px
     .cooperation__image
-      width: 53%
+      width: 60%
     .cooperation__info
-      width: 40%
+      width: 35%
+    .cooperation__video
+      margin-left: 0
     .cooperation__row
       margin-top: 55px
       margin-bottom: 55px
       &--reverse
         margin-top: 0
         .cooperation__image
-          width: 53%
+          width: 60%
         .cooperation__info
           padding-left: 0
+        .cooperation__video
+          margin-left: 0
 
     &__prod
       font-size: 20px
