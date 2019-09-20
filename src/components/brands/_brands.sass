@@ -4,23 +4,23 @@
   background: #fff
   position: relative
   overflow: hidden
-  &--hover
-    *
-      color: #fff !important
-    .brand-card__image--color
-      display: none
-    .brand-card__image-hover
-      display: block
+  // &--hover
+  //   *
+  //     color: #fff !important
+  //   .brand-card__image--color
+  //     display: none
+  //   .brand-card__image-hover
+  //     display: block
   &__bg
     position: absolute 0
     z-index: 1
     display: flex
     flex-direction: column
     font-size: 0
-    transition: all .25s $ease
+    transition: all 0.75s $ease
     opacity: 0
-    &.is-active
-      opacity: 1
+    // &.is-active
+    //   opacity: 1
     img
       position: relative
       z-index: 1
@@ -35,6 +35,7 @@
     line-height: 1.3
     text-align: center
     margin-bottom: 24px
+    transition: all 0.75s $ease
   &__wrapper
     display: flex
     margin: -10px
@@ -82,10 +83,10 @@
     line-height: 1.55
     text-align: center
     color: #4F4F4F
-  &:hover
-    margin-top: -49px
-    .btn
-      display: inline-block
+  // &:hover
+    // margin-top: -49px
+    // .btn
+      // display: inline-block
 
 +r($hd)
   .brands
@@ -108,11 +109,6 @@
     &__col
       flex: 0 0 42%
       max-width: 42%
-      // margin: 0 auto
-    .btn
-      display: inline-block
-      max-width: 115px
-      margin: 15px auto 0
 
   .brand-card
     &__image
@@ -122,6 +118,25 @@
       .ico
         font-size: 75px
 
++rmin($lg)
+  .brands
+    &--hover
+      *
+        color: #fff !important
+      .brand-card__image--color
+        display: none
+      .brand-card__image-hover
+        display: block
+    &__bg
+      &.is-active
+        opacity: 1
+
+  .brand-card
+    &:hover
+      margin-top: -49px
+      .btn
+        display: inline-block
+
 +r($lg)
   .brands
     padding-bottom: 70px
@@ -129,6 +144,10 @@
       font-size: 20px
       line-height: 26px
       margin-bottom: 5px
+    .btn
+      display: inline-block
+      max-width: 115px
+      margin: 15px auto 0
 
   .brand-card
     &__description

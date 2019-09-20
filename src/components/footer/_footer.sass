@@ -42,11 +42,14 @@
     font-size: 16px
     line-height: 21px
     color: #4F4F4F
+    transition: color .25s $ease
+    &:hover
+      color: $colorPrimary
 
   &__developer
     a
       display: inline-block
-      font-size: 13px
+      font-size: 14px
       line-height: 17px
       color: #828282
       transition: color .25s $ease
@@ -146,6 +149,10 @@
     &__right
       padding: 50px 0 50px 35px
 
+    &__developer
+      a
+        font-size: 13px
+
     &__address-content
       font-size: 14px
       line-height: 18px
@@ -207,6 +214,11 @@
   .nav-link
     padding: 12px
     min-width: 140px
+    &__icon
+      width: 24px
+      height: 24px
+      .ico
+        font-size: 11px
     &__title
       font-size: 11px
       line-height: 20px

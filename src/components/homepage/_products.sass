@@ -213,6 +213,21 @@
         max-width: $col12
         .product
           display: flex
+
+      &:first-child
+        .product__dropdown
+          right: auto
+          left: 24px
+          transform: translate3d(10px, 0, 0)
+        .product
+          &:hover
+            .product__dropdown
+              transform: translate3d(-10px, 0, 0)
+
+
+    &__news
+      padding: 0 10px
+
   .product
     &__icon
       margin-top: 0
@@ -223,26 +238,38 @@
     &__dropdown
       min-width: 140px
       min-height: 140px
-      left: 50%
-      right: auto
-      top: 100%
-      transform: translate3d(-50%, 5px, 0)
+      left: auto
+      right: 24px
+      // top: 100%
+      transform: translate3d(0, 0, 0)
     &__dropdown-wrapper
       // padding: 10px
     &__article, &__title
       left: 15px
     &__title
       font-size: 10px
-      bottom: 15px
+      // bottom: 15px
+
+      position: static
+      width: 100%
+      padding: 0 15px 10px
     &__article
       top: 15px
       font-size: 10px
-    &__content
-      right: auto
-      left: 50%
-      transform: translateX(-50%)
+      position: relative
+      width: 100%
+      padding: 10px 15px 0
+      // margin-bottom: -10px
+      left: 0
+      top: 0
+      z-index: 2
+
+    // &__content
+    //   right: auto
+    //   left: 50%
+    //   transform: translateX(-50%)
     &__plus
       &:hover
         & + .product__dropdown
-          opacity: 1
-          transform: translate3d(-50%,-10px,0)
+          // opacity: 1
+          transform: translate3d(10px,0,0)

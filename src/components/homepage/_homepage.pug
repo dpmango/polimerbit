@@ -8,7 +8,7 @@
         .homepage__content
           .homepage__title Ведущий российский производитель бытовых изделий из&nbsp;пластика с&nbsp;80-летней <a href="history.html">историей</a> и&nbsp;современным <a href="production.html">производством</a>.
           .homepage__description Трудно отыскать хотя бы одну современную семью, которая не пользовалась бы нашей продукцией.
-      .homepage__right(data-aos="fade-up")
+      .homepage__right(data-aos="fade-up" js-teleport data-teleport-to="home-news" data-teleport-condition="<768")
         .h-news
           a(href="#").h-news-card
             .h-news-card__title Новости
@@ -55,6 +55,8 @@
                 span  передовых экологичных видов сырья
                 |  и не содержит Бисфенол А
 
+        .products__news(data-teleport-target="home-news")
+
         .products__col.products__col--4.products__col--mt-
           .product
             .product__image
@@ -66,7 +68,7 @@
                 .product__dropdown-wrapper
                   .product__article Артикул: 35601
                   .product__dropdown-image
-                    img(src='img/productDrop_3.png' srcset='img/productDrop_3@2x.png 2x')
+                    img(src='img/productImg_3.png' srcset='img/productImg_3@2x.png 2x')
                   .product__title Контейнер. Профи Kids 15 л
 
 
