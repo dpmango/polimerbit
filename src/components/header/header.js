@@ -51,14 +51,13 @@
       var _this = this;
 
       // will close navi on tablet on outside clicks
-      _document.on('click', function(e) {
+      _document.on('click touchstart', '.mobile-navi', function(e) {
         // close on outside clicks
         if (window.innerWidth <= 1024) {
           var $target = $(e.target);
-          var $closestHeader = $target.closest('.header').length === 0;
-          var $closestNaviWrapper = $target.closest('.mobile-navi__wrapper').length === 0;
+          var closingCondition = $target.is('.mobile-navi.is-active');
 
-          if ($closestHeader && $closestNaviWrapper) {
+          if (closingCondition) {
             _this.closeMobileMenu();
           }
         }
