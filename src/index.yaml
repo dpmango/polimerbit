@@ -2,22 +2,22 @@ ProjectTitle: Polimerbit
 
 PageList:
   - file: homepage.html
-    ready: 80
+    ready: 100
   - file: history.html
-    ready: 80
+    ready: 100
   - file: production.html
-    ready: 80
+    ready: 100
   - file: polimer-today.html
-    ready: 80
+    ready: 100
   - file: cooperation.html
-    ready: 80
+    ready: 100
   - file: contact-prod.html
-    ready: 80
+    ready: 100
   - file: materials.html
-    ready: 80
+    ready: 100
   - file: contacts.html
-    ready: 80
+    ready: 100
   - file: news-article.html
-    ready: 80
+    ready: 100
   - file: 404.html
-    ready: 80
+    ready: 100
