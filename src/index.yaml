@@ -12,7 +12,7 @@ PageList:
   - file: cooperation.html
     ready: 80
   - file: contact-prod.html
-    ready: 0
+    ready: 80
   - file: materials.html
     ready: 80
   - file: contacts.html

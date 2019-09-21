@@ -1,0 +1,55 @@
+// CONTACT PRODUCTION INFO
+.contact
+  .container.container--team
+    p.today__section(data-aos="fade-up") Контрактное производство на ТПА оборудовании
+    .contact__grid
+      .contact__item(data-aos="fade-up")
+        .contact__icon
+          +svgColor('contact-1')
+        p Входящая заявка/составление технического задания
+      .contact__item(data-aos="fade-up")
+        .contact__icon
+          +svgColor('contact-2')
+        p 3D Моделирование/ Прототипирование/ Предварительный расчёт
+      .contact__item(data-aos="fade-up")
+        .contact__icon
+          +svgColor('contact-3')
+        p Проектирование и изготовление пресс
+      .contact__item(data-aos="fade-up")
+        .contact__icon
+          +svgColor('contact-4')
+        p Запуск изделия в серию
+
+    .contact__content
+      form(action="#" js-validate-form)
+        .contact__form(data-aos="fade-up")
+          p.contact__form-title Оставить заявку
+          .contact__row
+            .contact__input
+              p Представьтесь пожалуйста
+              .input-container
+                input(type="text" name="name" placeholder="Иванов Иван")
+            .contact__input
+              p Введите ваш e-mail
+              .input-container
+                input(type="text" name="email" placeholder="info@polimerbit.ru")
+            .contact__input
+              p Введите ваш телефон
+              .input-container
+                input(type="text" name="phone" placeholder="+X (XXX) XXX-XXXX")
+          .contact__input
+            p Комментарий к заявке
+            .input-container
+              textarea(placeholder="Опишите ваши эмоции при использовании нашей продукцией.")
+          .contact__input
+            input.btn(type="submit" value="Отправить")
+          p.contact__form-polit Нажимая кнопку "Отправить" Вы соглашаетесь с
+            a(href="#") политикой конфиденциальности
+            | .
+
+      .contact__link(data-aos="fade-up")
+        a.nav-link(href="#")
+          .nav-link__content
+            .nav-link__name Статья о нашем оборудовании
+          .nav-link__icon
+            +svgMono('arrow-right')

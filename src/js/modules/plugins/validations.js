@@ -119,6 +119,9 @@
           submitHandler: _this.data.validateSubmitHandler,
           // rules to be set in html as well (merged props)
           rules: {
+            name: {
+              required: true,
+            },
             email: {
               required: true,
               email: true,
@@ -126,6 +129,9 @@
             phone: _this.data.masks.phone,
           },
           messages: {
+            name: {
+              required: 'Заполните это поле',
+            },
             email: {
               required: 'Заполните это поле',
               email: 'Формат email неверен',
