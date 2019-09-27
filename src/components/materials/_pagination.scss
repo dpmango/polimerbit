@@ -47,10 +47,13 @@
     &:first-child {
       transform: scale(-1, 1);
       margin-right: 10px;
+      opacity: 0.3;
+      pointer-events: none;
+      margin-right: 44px;
     }
 
     &:last-child {
-      margin-left: 10px;
+      margin-left: 44px;
     }
 
     &:last-child,
@@ -76,6 +79,8 @@
 
   &:not([actpage="1"]) &_i:nth-child(1) {
     display: flex;
+    opacity: 1;
+    pointer-events: all;
   }
 }
 
@@ -115,6 +120,8 @@
 
       +.cdp_i:last-child {
         // display: none !important;
+        opacity: 0.3;
+        pointer-events: none
       }
     }
 
@@ -145,7 +152,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   @for $i from 1 through 20 {
     .cdp[actpage="#{$i}"] {
       .cdp_i:nth-child(#{$i - 2}):not(:first-child):not(:nth-child(2)) {

@@ -80,8 +80,10 @@
 
         if (scroll.y > 0) {
           this.data.header.container.addClass(fixedClass);
+          $('.scroll-top').addClass('is-visible');
         } else {
           this.data.header.container.removeClass(fixedClass);
+          $('.scroll-top').removeClass('is-visible');
         }
       }
     },
