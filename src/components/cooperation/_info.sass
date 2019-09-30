@@ -23,6 +23,7 @@
     width: 56%
     font-size: 0
     margin-left: auto
+    position: relative
     // max-height: 700px
 
     img
@@ -97,6 +98,38 @@
       line-height: 23px
       font-weight: 400
 
+  .cooperation__image
+    width: 62%
+    min-height: 650px
+    position: relative
+    img, picture, video
+      position: relative
+      z-index: 1
+      flex: 1 1 auto
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  .cooperation__image
+    width: 62%
+    min-height: 650px
+
+  .cooperation__video
+    position: absolute 0
+    height: 100%
+    width: calc(100% + 100px)
+    max-width: 880px
+    margin-right: -100px
+  .cooperation__row
+    &--reverse
+      .cooperation__info
+        padding-right: 0
+        max-width: 360px
+        margin-left: auto
+      .cooperation__video
+        margin-left: -100px
+        margin-right: 0
+
 +r($hd)
   .cooperation
     padding: 72px 0 0
@@ -149,13 +182,27 @@
     &__separator
       margin: 66px auto 56px
 
+    .cooperation__image
+      width: 59%
+      min-height: 560px
+    .cooperation__info
+      width: 37%
+    .cooperation__row
+      margin-top: 95px
+      &--reverse
+        margin-top: 0
+        .cooperation__info
+          padding-left: 30px
+          padding-right: 0
+
 +r($xl)
   .cooperation
     padding: 56px 0 0
     &__text
       font-size: 18px
       line-height: 28px
-      max-width: 620px
+      max-width: 790px
+      margin: 0 auto
     &__row
       margin: 86px auto 110px
       &--reverse
@@ -193,11 +240,38 @@
     &__separator
       margin: 50px auto
 
+    .container
+      max-width: 100%
+
+    .cooperation__image
+      width: 63%
+      min-height: 500px
+    .cooperation__info
+      width: 35%
+
+    .cooperation__video
+      width: 100%
+      margin-left: 0
+
+    .cooperation__row
+      margin-top: 60px
+      margin-bottom: 60px
+      &--reverse
+        margin-top: 0
+        .cooperation__image
+          width: 63%
+        .cooperation__info
+          padding-left: 0
+
+        .cooperation__video
+          margin-right: 0
+          margin-left: 0
+
 +r($lg)
   .cooperation
     &__text
       line-height: 26px
-      max-width: 580px
+      max-width: 820px
     &__row
       margin: 55px auto
       &--reverse
@@ -234,6 +308,24 @@
       .nav-link__name
         font-size: 16px
         line-height: 21px
+
+    .cooperation__image
+      width: 60%
+    .cooperation__info
+      width: 35%
+    .cooperation__video
+      margin-left: 0
+    .cooperation__row
+      margin-top: 55px
+      margin-bottom: 55px
+      &--reverse
+        margin-top: 0
+        .cooperation__image
+          width: 60%
+        .cooperation__info
+          padding-left: 0
+        .cooperation__video
+          margin-left: 0
 
 +r($md)
   .cooperation
@@ -292,3 +384,23 @@
         padding: 14px 14px 16px 14px
         min-height: 95px
 
+    .cooperation__image
+      width: 100%
+      min-height: 1px
+    .cooperation__video
+      position: relative
+    .cooperation__info
+      width: 100%
+      max-width: 100%
+      &-main
+        margin-top: 16px
+    .cooperation__row
+      margin-top: 53px
+      margin-bottom: 53px
+      &--reverse
+        margin-top: 0
+        .cooperation__image
+          width: 100%
+        .cooperation__info
+          padding-left: 0
+          max-width: 100%
