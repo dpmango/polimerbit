@@ -1057,6 +1057,22 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       }
     };
 
+    methods.isMac = function() {
+      if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+    methods.isIOS = function() {
+      if (/(iPhone|iPod|iPad)/i.test(navigator.platform)) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
     methods.setBodyTags = function() {
       if (methods.msieversion()) {
         $('body').addClass('is-ie');
@@ -1065,11 +1081,16 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       if (methods.isMobile()) {
         $('body').addClass('is-mobile');
       }
+
+      if (methods.isMac()) {
+        $('body').addClass('is-maclike');
+      }
     };
 
     var data = {
       isIe: methods.msieversion(),
       isMobile: methods.isMobile(),
+      isIOS: methods.isIOS(),
       isRetinaDisplay: methods.isRetinaDisplay(),
     };
     return {
@@ -1174,24 +1195,26 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
 
           $('.cdp').attr('actpage', paginationPage);
         })
-        .on('click', '.product__plus', function() {
-          var toggle = $(this);
-          var dropdown = $(this)
-            .parent()
-            .find('.product__dropdown');
+        .on('touchstart', '.product__plus', function() {
+          if (APP.Browser().data.isMobile) {
+            var toggle = $(this);
+            var dropdown = $(this)
+              .parent()
+              .find('.product__dropdown');
 
-          toggle.toggleClass('is-active');
-          dropdown.toggleClass('is-active');
-        })
-        .on('click', function(e) {
-          var $target = $(e.target);
-          var closingCondition = $target.closest('.product__content').length === 0;
-
-          if (closingCondition) {
-            $('.product__plus').removeClass('is-active');
-            $('.product__dropdown').removeClass('is-active');
+            toggle.toggleClass('is-active');
+            dropdown.toggleClass('is-active');
           }
-        });
+        })
+        // .on('click', function(e) {
+        //   var $target = $(e.target);
+        //   var closingCondition = $target.closest('.product__content').length === 0;
+
+        //   if (closingCondition) {
+        //     $('.product__plus').removeClass('is-active');
+        //     $('.product__dropdown').removeClass('is-active');
+        //   }
+        // });
     },
     destroy: function destroy() {
       // ... code ...

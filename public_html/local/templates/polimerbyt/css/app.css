@@ -2898,7 +2898,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 }
 
 .hamburger:hover {
-  background: #8b1a20;
+  background: #16843f;
 }
 
 .hamburger-box {
@@ -2906,6 +2906,14 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   height: 12px;
   display: inline-block;
   position: relative;
+  -webkit-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+.is-maclike .hamburger-box {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
 }
 
 .hamburger-inner {
@@ -4596,7 +4604,7 @@ html.mfp-helper body {
 }
 
 .contact__input .btn:hover {
-  background: #8b1a20;
+  background: #16843f;
 }
 
 .contact__link {
@@ -7679,18 +7687,19 @@ html.mfp-helper body {
   will-change: transform;
 }
 
-.product__content:hover .product__plus .ico {
+body:not(.is-mobile) .product__content:hover .product__plus .ico {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.product__content:hover .product__dropdown {
+body:not(.is-mobile) .product__content:hover .product__dropdown {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
           pointer-events: all;
 }
+
 
 .product__dropdown {
   position: absolute;
@@ -7966,7 +7975,7 @@ html.mfp-helper body {
     top: 0;
     z-index: 2;
   }
-  .product__content:hover .product__dropdown {
+  body:not(.is-mobile) .product__content:hover .product__dropdown {
     -webkit-transform: translate3d(10px, 0, 0);
             transform: translate3d(10px, 0, 0);
   }
