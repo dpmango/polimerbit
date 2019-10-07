@@ -4379,6 +4379,11 @@ html.mfp-helper body {
         -ms-transform: translateY(-49px);
             transform: translateY(-49px);
   }
+  .brands__col.no-animations .brand-card:hover{
+    -webkit-transform: translateY(-0px);
+        -ms-transform: translateY(-0px);
+            transform: translateY(-0px);
+  }
   .brand-card:hover .btn {
     opacity: 1;
     pointer-events: all;
