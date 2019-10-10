@@ -1159,6 +1159,14 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
             $consultant.removeClass('is-visible');
             $consultantUnknown.addClass('is-visible');
             $("[data-select='" + _valueCheckbox + "']").addClass('is-visible');
+            $('[js-select]').selectric('destroy');
+
+             $('[js-select] option').prop('selected', function() {
+               return this.defaultSelected;
+             });
+
+             $('[js-select]').selectric('init');
+
           } else {
             $select.removeClass('is-visible');
           }
