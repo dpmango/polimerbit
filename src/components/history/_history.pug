@@ -103,9 +103,9 @@
       .history__row.history__row--reverse
         .history__image
           .history__image-container(js-teleport data-teleport-to="image-mobile7" data-teleport-condition="<768")
-            img(src='img/historyImg6_1.jpg' srcset='img/historyImg6_1@2x.jpg 2x' data-aos="blur")
-          .history__image-container.history__image-container--absolute(style="left: 23%; top: 50%; max-width: 44%")
-            img(src='img/historyImg6_2.jpg' srcset='img/historyImg6_2@2x.jpg 2x' data-aos="blur")
+            img(src='img/2002.jpg' srcset='img/2002@2x.jpg 2x' data-aos="blur")
+          //- .history__image-container.history__image-container--absolute(style="left: 23%; top: 50%; max-width: 44%")
+          //-   img(src='img/historyImg6_2.jpg' srcset='img/historyImg6_2@2x.jpg 2x' data-aos="blur")
         .history__info
           .history__info-content
             p.history__date(data-aos="fade-in") 2002 – 2005 г.
@@ -122,7 +122,8 @@
       .history__row
         .history__image
           .history__image-container(js-teleport data-teleport-to="image-mobile8" data-teleport-condition="<768")
-            img(src='img/historyImg7.jpg' srcset='img/historyImg7@2x.jpg 2x' data-aos="blur")
+            //- img(src='img/historyImg7.jpg' srcset='img/historyImg7@2x.jpg 2x' data-aos="blur")
+            img(src='img/2010.jpg' srcset='img/2010@2x.jpg 2x' data-aos="blur")
         .history__info
           .history__info-content
             p.history__date(data-aos="fade-in") 2010 г.
@@ -130,24 +131,42 @@
             .history__image-container.history__teleport(data-teleport-target="image-mobile8")
             p.history__description(data-aos="fade-in") Продолжается курс на модернизацию, бережливое производство, повсеместную роботизацию производства. Проводится усиление финансового и IT блоков компании, появляется позиция Директора по развитию, частично обновляется рабочий коллектив. Окончательно закрывается производство полиэтиленовых пакетов и руководство компании полностью фокусируется на стратегически важном рынке бытовых изделий из пластика.
 
-    section(data-section="9")
-      .history__row
+  .section-white
+    .container
+      .history__row.history__row--reverse
         .history__image
-          .history__image-container(js-teleport data-teleport-to="image-mobile9" data-teleport-condition="<768")
-            img(src='img/historyImg8.jpg' srcset='img/historyImg8@2x.jpg 2x' data-aos="blur")
+          .history__image-container(js-teleport data-teleport-to="image-mobile7" data-teleport-condition="<768")
+            img(src='img/2011.png' srcset='img/2011@2x.png 2x' data-aos="blur")
+          //- .history__image-container.history__image-container--absolute(style="left: 23%; top: 50%; max-width: 44%")
+          //-   img(src='img/historyImg6_2.jpg' srcset='img/historyImg6_2@2x.jpg 2x' data-aos="blur")
+        section(data-section="9")
         .history__info
           .history__info-content
             p.history__date(data-aos="fade-in") 2011 г.
             p.history__title(data-aos="fade-in") В 2011 году компания продолжает увеличивать долю рынка, ряд крупных сетей и несетевых оптовых клиентов сокращает закупки у конкурентов и переходит в АО «Полимербыт».
-            .history__image-container.history__teleport(data-teleport-target="image-mobile9")
+            .history__image-container.history__teleport(data-teleport-target="image-mobile7")
             p.history__description(data-aos="fade-in") Проводятся масштабные инвестиции в складской комплекс, создаются тысячи метров новых площадей, выкупаются в собственность земельные участки под обоими производственными площадками в Москве. Компания активно рассматривает варианты качественного скачка в развитии через создание или приобретение новых производственных площадок.
 
-    section(data-section="10")
-      .history__row
-        .history__info.history__info--middle
-          .history__info-content(style="max-width: 755px;")
-            p.history__date(data-aos="fade-in") 2012 г.
-            p.history__title(data-aos="fade-in") В 2012 году компания осуществляет самые масштабные инвестиции за свою новейшую историю, ускоряется работа по обновлению и расширению ассортимента продукции, начинается партнерство с Walt Disney, производятся крупные поставки пластиковых изделий для нужд Олимпиады Сочи-2014. Тем самым закладываются прочные основы уверенного роста компании в будущем.
+            section(data-section="10")
+              p.history__date(style="margin-top: 48px;" data-aos="fade-in") 2012 г.
+              p.history__title(data-aos="fade-in") В 2012 году компания осуществляет самые масштабные инвестиции за свою новейшую историю, ускоряется работа по обновлению и расширению ассортимента продукции, начинается партнерство с Walt Disney, производятся крупные поставки пластиковых изделий для нужд Олимпиады Сочи-2014. Тем самым закладываются прочные основы уверенного роста компании в будущем.
+      //- .history__row
+      //-   .history__image
+      //-     .history__image-container(js-teleport data-teleport-to="image-mobile9" data-teleport-condition="<768")
+      //-       img(src='img/historyImg8.jpg' srcset='img/historyImg8@2x.jpg 2x' data-aos="blur")
+      //-   .history__info
+      //-     .history__info-content
+      //-       p.history__date(data-aos="fade-in") 2011 г.
+      //-       p.history__title(data-aos="fade-in") В 2011 году компания продолжает увеличивать долю рынка, ряд крупных сетей и несетевых оптовых клиентов сокращает закупки у конкурентов и переходит в АО «Полимербыт».
+      //-       .history__image-container.history__teleport(data-teleport-target="image-mobile9")
+      //-       p.history__description(data-aos="fade-in") Проводятся масштабные инвестиции в складской комплекс, создаются тысячи метров новых площадей, выкупаются в собственность земельные участки под обоими производственными площадками в Москве. Компания активно рассматривает варианты качественного скачка в развитии через создание или приобретение новых производственных площадок.
+
+    //- section(data-section="10")
+    //-   .history__row
+    //-     .history__info.history__info--middle
+    //-       .history__info-content(style="max-width: 755px;")
+    //-         p.history__date(data-aos="fade-in") 2012 г.
+    //-         p.history__title(data-aos="fade-in") В 2012 году компания осуществляет самые масштабные инвестиции за свою новейшую историю, ускоряется работа по обновлению и расширению ассортимента продукции, начинается партнерство с Walt Disney, производятся крупные поставки пластиковых изделий для нужд Олимпиады Сочи-2014. Тем самым закладываются прочные основы уверенного роста компании в будущем.
 
   section(data-section="11")
     .history__full
