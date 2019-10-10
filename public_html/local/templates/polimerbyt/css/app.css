@@ -7139,6 +7139,38 @@ html.mfp-helper body {
   }
 }
 
+.section-white {
+  background: #fff;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  padding-bottom: 25px;
+}
+
+.section-white .history__row{
+  margin-bottom: 0;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  .section-white{
+    background: none;
+    padding-top: 0;
+    padding-bottom: 0;
+   }
+
+   .section-white .history__row{
+      margin-bottom: 0
+    }
+
+  .section-white .history__description{
+    display: none;
+  }
+}
+
+
+
+
 .history-nav {
   left: 0;
   position: relative;

@@ -229,8 +229,8 @@ $APPLICATION->SetTitle(""); ?><?$APPLICATION->AddViewContent('data-modifier', 'i
             <section data-section="6">
                 <div class="history__row history__row--reverse">
                     <div class="history__image">
-                        <div class="history__image-container" js-teleport="" data-teleport-to="image-mobile7" data-teleport-condition="<768"><img src="/local/templates/polimerbyt/img/historyImg6_1.jpg" src="/local/templates/polimerbyt/img/historyImg6_1@2x.jpg 2x" data-aos="blur" class=""></div>
-                        <div class="history__image-container history__image-container--absolute" style="left: 20%; top: 64%; max-width: 57%"><img src="/local/templates/polimerbyt/img/historyImg6_2.jpg" src="/local/templates/polimerbyt/img/historyImg6_2@2x.jpg 2x" data-aos="blur" class=""></div>
+                        <div class="history__image-container" js-teleport="" data-teleport-to="image-mobile7" data-teleport-condition="<768"><img src="/local/templates/polimerbyt/img/2002.jpg" src="/local/templates/polimerbyt/img/2002@2x.jpg 2x" data-aos="blur" class=""></div>
+                        <!-- <div class="history__image-container history__image-container--absolute" style="left: 20%; top: 64%; max-width: 57%"><img src="/local/templates/polimerbyt/img/historyImg6_2.jpg" src="/local/templates/polimerbyt/img/historyImg6_2@2x.jpg 2x" data-aos="blur" class=""></div> -->
                     </div>
                     <div class="history__info">
                         <div class="history__info-content">
@@ -257,7 +257,7 @@ $APPLICATION->SetTitle(""); ?><?$APPLICATION->AddViewContent('data-modifier', 'i
             <section data-section="8">
                 <div class="history__row">
                     <div class="history__image">
-                        <div class="history__image-container" js-teleport="" data-teleport-to="image-mobile8" data-teleport-condition="<768"><img src="/local/templates/polimerbyt/img/historyImg7.jpg" data-aos="blur" class=""></div>
+                        <div class="history__image-container" js-teleport="" data-teleport-to="image-mobile8" data-teleport-condition="<768"><img src="/local/templates/polimerbyt/img/2010.jpg" data-aos="blur" class=""></div>
                     </div>
                     <div class="history__info">
                         <div class="history__info-content">
