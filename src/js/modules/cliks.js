@@ -62,6 +62,14 @@
             $consultantUnknown.addClass('is-visible');
             $("[data-select='" + _valueCheckbox + "']").addClass('is-visible');
 
+            $('[js-select]').selectric('destroy');
+
+            $('[js-select] option').prop('selected', function() {
+              return this.defaultSelected;
+            });
+
+            $('[js-select]').selectric('init');
+
           } else {
 
             $select.removeClass('is-visible');
