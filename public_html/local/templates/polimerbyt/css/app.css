@@ -5272,6 +5272,17 @@ html.mfp-helper body {
   margin-right: 0;
 }
 
+img.mobile-poster{
+  display: none;
+}
+
+.is-mobile .cooperation .cooperation__video video{
+display: none;
+}
+.is-mobile .cooperation .cooperation__video img.mobile-poster{
+  display: block;
+}
+
 @media only screen and (max-width: 1500px) {
   .cooperation {
     padding: 72px 0 0;
@@ -6783,7 +6794,7 @@ html.mfp-helper body {
   left: 0;
   position: absolute;
   z-index: 2;
-  background: rgba(32, 32, 32, 0.3);
+  background: rgba(32, 32, 32, 0.4);
 }
 
 .hero--with-overlay .hero__background:after {
@@ -10843,7 +10854,8 @@ body:not(.is-mobile) .product__content:hover .product__dropdown {
 }
 
 .separator__image img {
-  max-width: 100%;
+  /* max-width: 100%; */
+  max-width: 290px;
 }
 
 .separator__title {

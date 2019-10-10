@@ -275,45 +275,28 @@ $APPLICATION->SetTitle(""); ?><?$APPLICATION->AddViewContent('data-modifier', 'i
                     </div>
                 </div>
             </section>
-            <section data-section="9">
-                <div class="history__row">
-                    <div class="history__image">
-                        <div class="history__image-container" js-teleport="" data-teleport-to="image-mobile9" data-teleport-condition="<768"><img src="/local/templates/polimerbyt/img/historyImg8.jpg" data-aos="blur" class=""></div>
-                    </div>
-                    <div class="history__info">
-                        <div class="history__info-content">
-                            <p class="history__date" data-aos="fade-in">2011 г.</p>
-                            <p class="history__title" data-aos="fade-in">В
-                                2011 году компания продолжает увеличивать долю рынка, ряд крупных сетей
-                                и несетевых оптовых клиентов сокращает закупки у конкурентов и
-                                переходит в АО «Полимербыт».</p>
-                            <div class="history__image-container history__teleport" data-teleport-target="image-mobile9"></div>
-                            <p class="history__description" data-aos="fade-in">Проводятся
-                                масштабные инвестиции в складской комплекс, создаются тысячи метров
-                                новых площадей, выкупаются в собственность земельные участки под обоими
-                                производственными площадками в Москве. Компания активно рассматривает
-                                варианты качественного скачка в развитии через создание или приобретение
-                                новых производственных площадок.</p>
-                        </div>
-                    </div>
+        </div>
+        <div class="section-white">
+          <div class="container">
+            <div class="history__row history__row--reverse">
+              <div class="history__image">
+                <div class="history__image-container" js-teleport data-teleport-to="image-mobile7" data-teleport-condition="&lt;768"><img src="/local/templates/polimerbyt/img/2011.png" srcset="/local/templates/polimerbyt/img/2011@2x.png 2x" data-aos="blur"></div>
+              </div>
+              <section data-section="9"></section>
+              <div class="history__info">
+                <div class="history__info-content">
+                  <p class="history__date" data-aos="fade-in">2011 г.</p>
+                  <p class="history__title" data-aos="fade-in">В 2011 году компания продолжает увеличивать долю рынка, ряд крупных сетей и несетевых оптовых клиентов сокращает закупки у конкурентов и переходит в АО «Полимербыт».</p>
+                  <div class="history__image-container history__teleport" data-teleport-target="image-mobile7"></div>
+                  <p class="history__description" data-aos="fade-in">Проводятся масштабные инвестиции в складской комплекс, создаются тысячи метров новых площадей, выкупаются в собственность земельные участки под обоими производственными площадками в Москве. Компания активно рассматривает варианты качественного скачка в развитии через создание или приобретение новых производственных площадок.</p>
+                  <section data-section="10">
+                    <p class="history__date" style="margin-top: 48px;" data-aos="fade-in">2012 г.</p>
+                    <p class="history__title" data-aos="fade-in">В 2012 году компания осуществляет самые масштабные инвестиции за свою новейшую историю, ускоряется работа по обновлению и расширению ассортимента продукции, начинается партнерство с Walt Disney, производятся крупные поставки пластиковых изделий для нужд Олимпиады Сочи-2014. Тем самым закладываются прочные основы уверенного роста компании в будущем.</p>
+                  </section>
                 </div>
-            </section>
-            <section data-section="10">
-                <div class="history__row">
-                    <div class="history__info history__info--middle">
-                        <div class="history__info-content" style="max-width: 755px;">
-                            <p class="history__date" data-aos="fade-in">2012 г.</p>
-                            <p class="history__title" data-aos="fade-in">В
-                                2012 году компания осуществляет самые масштабные инвестиции за свою
-                                новейшую историю, ускоряется работа по обновлению и расширению
-                                ассортимента продукции, начинается партнерство с Walt Disney,
-                                производятся крупные поставки пластиковых изделий для нужд Олимпиады
-                                Сочи-2014. Тем самым закладываются прочные основы уверенного роста
-                                компании в будущем.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+              </div>
+            </div>
+          </div>
         </div>
         <section data-section="11">
             <div class="history__full">
