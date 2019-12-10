@@ -5297,11 +5297,17 @@ img.mobile-poster{
   display: none;
 }
 
-.is-mobile .cooperation .cooperation__video video{
-display: none;
+.is-mobile .cooperation__video video{
+  display: none !important;
 }
-.is-mobile .cooperation .cooperation__video img.mobile-poster{
-  display: block;
+.is-mobile .cooperation__video img.mobile-poster{
+  display: block !important;
+}
+.is-mobile .hero__background video{
+  display: none !important;
+}
+.is-mobile .hero__background img.mobile-poster{
+  display: block !important;
 }
 
 @media only screen and (max-width: 1500px) {
