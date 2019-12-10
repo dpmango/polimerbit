@@ -51,15 +51,25 @@
       font-size: 18px
       transition: transform .25s $ease
       will-change: transform
-    &:hover
+    &.is-active
       .ico
         transform: rotate(45deg)
-      & + .product__dropdown
-        opacity: 1
-        transform: translate3d(0,0,0)
+    &:hover
+      // .ico
+      //   transform: rotate(45deg)
+      // & + .product__dropdown
+        // opacity: 1
+        // transform: translate3d(0,0,0)
 
+body:not(.is-mobile) .product__content:hover
+  .product__plus .ico
+    transform: rotate(45deg)
+  .product__dropdown
+    opacity: 1
+    transform: translate3d(0,0,0)
+    pointer-events: all
 
-
+.product
   &__dropdown
     position: absolute
     z-index: 3
@@ -77,11 +87,17 @@
     transform: translate3d(10px,0,0)
     // will-change: transform
     will-change: auto
+    pointer-events: none
     transition: all .25s $ease
     &--reverse
       right: 24px
       left: auto
       transform: translate3d(-10px,0,0)
+    &.is-active
+      opacity: 1
+      pointer-events: all
+      transform: translate3d(0, 0, 0)
+
   &__dropdown-wrapper
     position: relative
     flex: 1 0 auto
@@ -129,6 +145,7 @@
       span
         color: $colorPrimary
         font-weight: 600
+
 
 +r($hd)
   .products
@@ -272,4 +289,6 @@
       &:hover
         & + .product__dropdown
           // opacity: 1
-          transform: translate3d(10px,0,0)
+          // transform: translate3d(10px,0,0)
+  body:not(.is-mobile) .product__content:hover .product__dropdown, .product__dropdown.is-active
+    transform: translate3d(10px, 0, 0)

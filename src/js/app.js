@@ -74,7 +74,6 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.ScrollReveal.init();
       APP.Plugins.TextareaAutoExpand.init();
       APP.Plugins.Validations.init();
-      APP.Plugins.Tooltip.init();
       APP.Plugins.Sticky.init();
       APP.Plugins.Ymaps.init();
     };

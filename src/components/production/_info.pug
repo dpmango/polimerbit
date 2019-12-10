@@ -1,22 +1,22 @@
 // PRODUCTION INFO
 .production
   .container.container--team
-    p.cooperation__text(data-aos="fade-up") Год за годом «Полимербыт» производит пластиковые изделия для комфортной жизни, чтобы делать быт наших потребителей проще и приятнее. Для этого мы используем самые современные технологии в литье, обработке и декорировании пластмасс.
+    p.cooperation__text(data-aos="fade-up")
+      | Год за годом «Полимербыт» производит пластиковые изделия для комфортной жизни, чтобы делать быт наших потребителей проще и приятнее. Для этого мы используем самые современные технологии в литье, обработке и декорировании пластмасс.
     p.today__section(data-aos="fade-up") Производство АО «Полимербыт» - это
     .today__row
       .today__item(data-aos="fade-up" data-aos-delay="100")
+        p.today__item-title 2
+        p.today__item-sub-title Производственных прощадки
+      .today__item(data-aos="fade-up" data-aos-delay="100")
         p.today__item-title 94
         p.today__item-sub-title ТПА
-      .today__item(data-aos="fade-up" data-aos-delay="200")
+      .today__item(data-aos="fade-up" data-aos-delay="100")
         p.today__item-title 32
         p.today__item-sub-title IML робота
-      .today__item(data-aos="fade-up" data-aos-delay="300")
-        p.today__item-title 141
-        p.today__item-sub-title пресс-форма
-      .today__item(data-aos="fade-up" data-aos-delay="400")
-        p.today__item-title 84
+      .today__item(data-aos="fade-up" data-aos-delay="100")
+        p.today__item-title 325
         p.today__item-sub-title работников
-
 .production
   .container.container--team.container--lg-full
     .cooperation__row.cooperation__row--reverse
@@ -24,37 +24,33 @@
         .cooperation__icon
           +svgColor('icon-potential')
         p.cooperation__info-main
-          span Производственный потенциал Полимербыта по своим возможностям на несколько лет опережает ближайших конкурентов в России
+          span
+            | Производственный потенциал Полимербыта по своим возможностям на несколько лет опережает ближайших конкурентов в России
           | , а по ряду своих инновационных разработок зачастую превосходит уровень компаний Западной Европы и США.
       .cooperation__image(data-aos="fade-left")
-        //- img(js-lazy data-src='img/productionImg1.jpg' data-srcset='img/productionImg1@2x.jpg 2x')
         .cooperation__video
-          video(muted loop autoplay poster="img/heroBackground_1.jpg")
-            source(src="video/prod1.mp4" type="video/mp4")
-            source(src="video/prod1.webm" type="video/webm")
+          video(muted="muted" loop="" autoplay="autoplay" poster="http://www.polimerbyt.ru/upload/iblock/87b/87bc9312c5dc198a1bb70fe4bb37ce4b.jpg")
+            source(src="http://www.polimerbyt.ru/upload/video/video2.mp4" type="video/mp4")
+            source(src="http://www.polimerbyt.ru/upload/video/video2_(1).webm" type="video/webm")
+          img.mobile-poster(src="http://www.polimerbyt.ru/upload/iblock/87b/87bc9312c5dc198a1bb70fe4bb37ce4b.jpg")
     .cooperation__row
       .cooperation__info(data-aos="fade-up")
         .cooperation__icon
           +svgColor('icon-production-2')
         p.cooperation__info-main
           span Производство компании построено на прочной инфраструктурной базе
-          | , которая среди прочего включает в себя не имеющую аналогов систему охлаждения пресс-форм, систему автоматической подачи сырья, надежное энергообеспечение.
-      .cooperation__image(data-aos="fade-right")
-        //- img(js-lazy data-src='img/productionImg2.jpg' data-srcset='img/productionImg2@2x.jpg 2x')
+          | ,
+          |                     которая среди прочего включает в себя не имеющую аналогов систему
+          |                     охлаждения пресс-форм, систему автоматической подачи сырья, надежное
+          |                     энергообеспечение.
+      .cooperation__image(data-aos="fade-left")
         .cooperation__video
-          video(muted loop autoplay poster="img/heroBackground_1.jpg")
-            source(src="video/prod1.mp4" type="video/mp4")
-            source(src="video/prod1.webm" type="video/webm")
-    p.production__prod(data-aos="fade-up") На Полимербыте установлено современное оборудование итальянского и португальского производства.
-  .production__slider-container(data-aos="fade-up")
-    .production__slider(js-slider)
-      .swiper-wrapper
-        .swiper-slide.production__slide
-          img(src='img/productionSlider1.jpg' srcset='img/productionSlider1@2x.jpg 2x')
-        .swiper-slide.production__slide
-          img(src='img/productionSlider1.jpg' srcset='img/productionSlider1@2x.jpg 2x')
-      .slider-arrow.slider-next
-      .slider-arrow.slider-prev
+          video(muted="muted" loop="" autoplay="autoplay" poster="http://www.polimerbyt.ru/upload/iblock/475/4751634e4c4d0d20c3f713875a408dbf.jpg")
+            source(src="http://www.polimerbyt.ru/upload/video/video1.mp4" type="video/mp4")
+            source(src="http://www.polimerbyt.ru/upload/video/video1.webm" type="video/webm")
+          img.mobile-poster(src="http://www.polimerbyt.ru/upload/iblock/475/4751634e4c4d0d20c3f713875a408dbf.jpg")
+    p.production__prod(data-aos="fade-up")
+      | На Полимербыте установлено современное оборудование итальянского и португальского производства.
   .production__information
     .container.container--team
       .production__information-grid
@@ -62,15 +58,23 @@
           .production__left-item
             .production__left-icon
               +svgColor('icon-2tech')
-            p На предприятии внедрена
-              span технология двухкомпонентного литья, которая позволяет реализовывать уникальные эксплуатационные характеристики изделий
+            p
+              | На предприятии внедрена
+              span
+                | технология двухкомпонентного литья, которая позволяет реализовывать уникальные эксплуатационные характеристики изделий
               | , что значительно повышает качество ассортимента.
           .production__left-item
-            .production__left-icon.production__left-icon--big
+            .production__left-icon
               +svgColor('icon-iml')
             p
-              span Технология IML (IN-MOLD LABELING) позволяет получать на пластиковой поверхности четкую графику
+              span
+                | Технология IML (IN-MOLD LABELING) позволяет получать на пластиковой поверхности четкую графику
               |  и фотореалистичное изображение, устойчивое к мытью и истиранию.
         .production__right(data-aos="fade-up")
-          p Большая часть рутинных операций полностью автоматизирована и выполняется современными роботами. Собственный инструментальный цех, оснащенный самым передовым высокоточным металлорежущим оборудованием, позволяет при необходимости самостоятельно модернизировать пресс-формы и поддерживать их работоспособность.
-          p Все произведенные на предприятии изделия проходят тщательный многоступенчатый контроль качества и строго соответствуют всем требованиям ГОСТ, предъявляемым к продукции бытового назначения из пластика и экологичности используемых материалов.
+          p
+            | Большая часть рутинных операций полностью автоматизирована и выполняется современными роботами. Собственный инструментальный цех, оснащенный самым передовым высокоточным металлорежущим оборудованием, позволяет при необходимости самостоятельно модернизировать пресс-формы и поддерживать их работоспособность.
+          p
+            | Все произведенные на предприятии изделия проходят
+            | тщательный многоступенчатый контроль качества и строго соответствуют
+            | всем требованиям ГОСТ, предъявляемым к продукции бытового назначения из
+            | пластика и экологичности используемых материалов.

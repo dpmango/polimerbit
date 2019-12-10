@@ -5,6 +5,7 @@
   APP.Components.Nav = {
     data: {
       offsetHeight: undefined,
+      navList: undefined,
       paginationAnchors: [],
       historySections: [],
     },
@@ -16,6 +17,7 @@
     getHistorySections: function() {
       var $page = $('.page').last();
       this.data.offsetHeight = $('.header').outerHeight() + $('.history-nav').outerHeight();
+      this.data.navList = $page.find('.history-nav__list');
       this.data.paginationAnchors = $page.find('.history-nav__list a');
       this.data.historySections = $page.find('[data-section]');
     },
@@ -68,6 +70,17 @@
         .removeClass('is-active')
         .filter("[data-for-section='" + id + "']")
         .addClass('is-active');
+
+      // scroller
+      var $active = _this.data.paginationAnchors.filter("[data-for-section='" + id + "']");
+      var activeWidth = $active.outerWidth();
+      var activePos = $active.offset().left;
+
+      if (activePos + activeWidth > window.innerWidth) {
+        this.data.navList.scrollLeft(this.data.navList.scrollLeft() + activeWidth);
+      } else if (activePos - activeWidth < 0) {
+        this.data.navList.scrollLeft(this.data.navList.scrollLeft() - activeWidth);
+      }
     },
   };
 })(jQuery, window.APP);

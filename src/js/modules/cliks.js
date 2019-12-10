@@ -49,14 +49,15 @@
         })
 
         .on('change', '.ui-checkbox', function() {
-          var _valueCheckbox = $(this).find("input[type='radio']").val();
+          var _valueCheckbox = $(this)
+            .find("input[type='radio']")
+            .val();
           var $select = $('.contacts__select');
 
           var $consultant = $('.contacts__person');
           var $consultantUnknown = $('.contacts__person-unknown');
 
           if ($('.ui-checkbox').find("input[type='radio']:checked").length) {
-
             $select.removeClass('is-visible');
             $consultant.removeClass('is-visible');
             $consultantUnknown.addClass('is-visible');
@@ -69,11 +70,8 @@
             });
 
             $('[js-select]').selectric('init');
-
           } else {
-
             $select.removeClass('is-visible');
-
           }
         })
 
@@ -84,18 +82,13 @@
           var $consultant = $('.contacts__person');
 
           if (_value !== 'val0') {
-
             $consultantUnknown.removeClass('is-visible');
             $consultant.removeClass('is-visible');
             $("[data-person='" + _value + "']").addClass('is-visible');
-
           } else {
-
             $consultant.removeClass('is-visible');
             $consultantUnknown.addClass('is-visible');
-
           }
-
         })
 
         // pagination
@@ -113,7 +106,25 @@
             paginationPage = parseInt(go, 10);
           }
           $('.cdp').attr('actpage', paginationPage);
-        });
+        })
+
+        // tooltipstered
+        .on('click', '.tooltipstered', function() {
+          // changed tooltipstered to custom opener
+          var targetDataSelector = $(this).data('tooltip-content');
+          $('.map__tooltip').hide();
+          $(targetDataSelector).fadeIn();
+
+          var topTarget = $('.map__tooltips').offset().top - 80;
+
+          TweenLite.to(window, 0.6, {
+            scrollTo: { y: topTarget, autoKill: false },
+            ease: easingSwing,
+          });
+        })
+        .on('click', '.map__tooltip-close', function() {
+          $('.map__tooltip').fadeOut();
+        })
     },
     destroy: function() {
       // ... code ...
