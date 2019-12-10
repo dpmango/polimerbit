@@ -22,12 +22,12 @@
     }
 
     (sticky_class = opts.sticky_class),
-      (inner_scrolling = opts.inner_scrolling),
-      (recalc_every = opts.recalc_every),
-      (parent_selector = opts.parent),
-      (offset_top = opts.offset_top),
-      (manual_spacer = opts.spacer),
-      (enable_bottoming = opts.bottoming);
+    (inner_scrolling = opts.inner_scrolling),
+    (recalc_every = opts.recalc_every),
+    (parent_selector = opts.parent),
+    (offset_top = opts.offset_top),
+    (manual_spacer = opts.spacer),
+    (enable_bottoming = opts.bottoming);
 
     if (offset_top == null) {
       offset_top = 0;
@@ -1161,12 +1161,11 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
             $("[data-select='" + _valueCheckbox + "']").addClass('is-visible');
             $('[js-select]').selectric('destroy');
 
-             $('[js-select] option').prop('selected', function() {
-               return this.defaultSelected;
-             });
+            $('[js-select] option').prop('selected', function() {
+              return this.defaultSelected;
+            });
 
-             $('[js-select]').selectric('init');
-
+            $('[js-select]').selectric('init');
           } else {
             $select.removeClass('is-visible');
           }
@@ -1213,16 +1212,16 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
             toggle.toggleClass('is-active');
             dropdown.toggleClass('is-active');
           }
-        })
-        // .on('click', function(e) {
-        //   var $target = $(e.target);
-        //   var closingCondition = $target.closest('.product__content').length === 0;
+        });
+      // .on('click', function(e) {
+      //   var $target = $(e.target);
+      //   var closingCondition = $target.closest('.product__content').length === 0;
 
-        //   if (closingCondition) {
-        //     $('.product__plus').removeClass('is-active');
-        //     $('.product__dropdown').removeClass('is-active');
-        //   }
-        // });
+      //   if (closingCondition) {
+      //     $('.product__plus').removeClass('is-active');
+      //     $('.product__dropdown').removeClass('is-active');
+      //   }
+      // });
     },
     destroy: function destroy() {
       // ... code ...
@@ -2025,11 +2024,10 @@ function mediaCondition(cond) {
       var activeWidth = $active.outerWidth();
       var activePos = $active.offset().left;
 
-
-      if (activePos + activeWidth > window.innerWidth){
-        this.data.navList.scrollLeft(this.data.navList.scrollLeft() + activeWidth)
-      } else if ((activePos - activeWidth) < 0){
-        this.data.navList.scrollLeft(this.data.navList.scrollLeft() - activeWidth)
+      if (activePos + activeWidth > window.innerWidth) {
+        this.data.navList.scrollLeft(this.data.navList.scrollLeft() + activeWidth);
+      } else if (activePos - activeWidth < 0) {
+        this.data.navList.scrollLeft(this.data.navList.scrollLeft() - activeWidth);
       }
     },
   };
