@@ -49,14 +49,15 @@
         })
 
         .on('change', '.ui-checkbox', function() {
-          var _valueCheckbox = $(this).find("input[type='radio']").val();
+          var _valueCheckbox = $(this)
+            .find("input[type='radio']")
+            .val();
           var $select = $('.contacts__select');
 
           var $consultant = $('.contacts__person');
           var $consultantUnknown = $('.contacts__person-unknown');
 
           if ($('.ui-checkbox').find("input[type='radio']:checked").length) {
-
             $select.removeClass('is-visible');
             $consultant.removeClass('is-visible');
             $consultantUnknown.addClass('is-visible');
@@ -69,11 +70,8 @@
             });
 
             $('[js-select]').selectric('init');
-
           } else {
-
             $select.removeClass('is-visible');
-
           }
         })
 
@@ -84,18 +82,13 @@
           var $consultant = $('.contacts__person');
 
           if (_value !== 'val0') {
-
             $consultantUnknown.removeClass('is-visible');
             $consultant.removeClass('is-visible');
             $("[data-person='" + _value + "']").addClass('is-visible');
-
           } else {
-
             $consultant.removeClass('is-visible');
             $consultantUnknown.addClass('is-visible');
-
           }
-
         })
 
         // pagination

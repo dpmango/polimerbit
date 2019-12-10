@@ -1,0 +1,37 @@
+.materials__col
+  display: flex
+  flex-direction: column
+
+.materials__item
+  flex: 1 0 auto
+  display: flex
+  flex-direction: column
+  height: auto
+
+.contacts__col
+  display: flex
+  flex-direction: column
+
+.contacts__item
+  flex: 1 0 auto
+  display: flex
+  flex-direction: column
+  height: auto
+
+@media only screen and (max-width: 767px)
+  .contacts__item
+    flex-direction: row
+
+.swiper-wrapper, .swiper-slide
+  height: auto
+
+.today__coop
+  margin-top: 30px
+  margin-bottom: -60px
+
+  .today__row
+    padding-bottom: 0px
+
+@media only screen and (max-width: 767px)
+  .today__coop
+    margin-bottom: -20px

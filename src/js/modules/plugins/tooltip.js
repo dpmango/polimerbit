@@ -9,6 +9,13 @@
       };
 
       $('.tooltipstered').tooltipster(schemeOptions);
+
+      _window.on(
+        'scroll',
+        throttle(function() {
+          $('.tooltipstered').tooltipster('reposition');
+        }, 50)
+      );
     },
   };
 })(jQuery, window.APP);

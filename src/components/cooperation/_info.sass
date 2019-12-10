@@ -130,6 +130,16 @@
         margin-left: -100px
         margin-right: 0
 
+img.mobile-poster
+  display: none
+
+.is-mobile
+  .cooperation__video, .hero__background
+    video
+      display: none !important
+    img.mobile-poster
+      display: block !important
+
 +r($hd)
   .cooperation
     padding: 72px 0 0

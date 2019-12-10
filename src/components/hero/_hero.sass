@@ -23,7 +23,7 @@
         content: ' '
         position: absolute 0
         z-index: 2
-        background: rgba($fontColor, .3)
+        background: rgba($fontColor, .4)
       &::after
         display: inline-block
         content: ' '
@@ -39,7 +39,8 @@
   &__content
     position: relative
     z-index: 2
-    min-height: 100vh
+    min-height: 70vh
+    max-height: 700px
     padding: 197px 0 96px
     color: white
     display: flex
@@ -69,7 +70,7 @@
 +r($hd)
   .hero
     &__content
-      min-height: 656px
+      max-height: 656px
       padding: 152px 0 80px
     &__title
       font-size: 30px
@@ -82,7 +83,7 @@
 +r($xl)
   .hero
     &__content
-      min-height: 426px
+      max-height: 426px
       padding: 145px 0 45px
     &__subtitle
       font-size: 16px
