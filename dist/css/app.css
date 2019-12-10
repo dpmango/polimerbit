@@ -27,6 +27,12 @@
   fill: #30469C;
 }
 
+.ico-mono-close {
+  width: 1em;
+  height: 1em;
+  fill: #202020;
+}
+
 .ico-mono-home-design {
   width: 0.89em;
   height: 1em;
@@ -3050,249 +3056,6 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   transition: bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-/* This is the core CSS of Tooltipster */
-/* GENERAL STRUCTURE RULES (do not edit this section) */
-.tooltipster-base {
-  /* this ensures that a constrained height set by functionPosition,
-	if greater that the natural height of the tooltip, will be enforced
-	in browsers that support display:flex */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-  /* this may be overriden in JS for fixed position origins */
-  position: absolute;
-}
-
-.tooltipster-box {
-  /* see .tooltipster-base. flex-shrink 1 is only necessary for IE10-
-	and flex-basis auto for IE11- (at least) */
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-.tooltipster-content {
-  /* prevents an overflow if the user adds padding to the div */
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  /* these make sure we'll be able to detect any overflow */
-  max-height: 100%;
-  max-width: 100%;
-  overflow: auto;
-}
-
-.tooltipster-ruler {
-  /* these let us test the size of the tooltip without overflowing the window */
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  position: fixed;
-  right: 0;
-  top: 0;
-  visibility: hidden;
-}
-
-/* ANIMATIONS */
-/* Open/close animations */
-/* fade */
-.tooltipster-fade {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-}
-
-.tooltipster-fade.tooltipster-show {
-  opacity: 1;
-}
-
-/* grow */
-.tooltipster-grow {
-  -webkit-transform: scale(0, 0);
-  -ms-transform: scale(0, 0);
-  transform: scale(0, 0);
-  -webkit-transition-property: -webkit-transform;
-  -o-transition-property: -o-transform;
-  transition-property: -webkit-transform;
-  -o-transition-property: transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-backface-visibility: hidden;
-}
-
-.tooltipster-grow.tooltipster-show {
-  -webkit-transform: scale(1, 1);
-  -ms-transform: scale(1, 1);
-  transform: scale(1, 1);
-  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
-  -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
-}
-
-/* swing */
-.tooltipster-swing {
-  opacity: 0;
-  -webkit-transform: rotateZ(4deg);
-  -ms-transform: rotateZ(4deg);
-  transform: rotateZ(4deg);
-  -webkit-transition-property: -webkit-transform, opacity;
-  -o-transition-property: -o-transform;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  -o-transition-property: transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-}
-
-.tooltipster-swing.tooltipster-show {
-  opacity: 1;
-  -webkit-transform: rotateZ(0deg);
-  -ms-transform: rotateZ(0deg);
-  transform: rotateZ(0deg);
-  -webkit-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 1);
-  -webkit-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
-  -o-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
-  transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
-}
-
-/* fall */
-.tooltipster-fall {
-  -webkit-transition-property: top;
-  -o-transition-property: top;
-  transition-property: top;
-  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
-  -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
-}
-
-.tooltipster-fall.tooltipster-initial {
-  top: 0 !important;
-}
-
-.tooltipster-fall.tooltipster-dying {
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  top: 0 !important;
-  opacity: 0;
-}
-
-/* slide */
-.tooltipster-slide {
-  -webkit-transition-property: left;
-  -o-transition-property: left;
-  transition-property: left;
-  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
-  -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
-}
-
-.tooltipster-slide.tooltipster-initial {
-  left: -40px !important;
-}
-
-.tooltipster-slide.tooltipster-dying {
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  left: 0 !important;
-  opacity: 0;
-}
-
-/* Update animations */
-/* We use animations rather than transitions here because
- transition durations may be specified in the style tag due to
- animationDuration, and we try to avoid collisions and the use
- of !important */
-/* fade */
-@-webkit-keyframes tooltipster-fading {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes tooltipster-fading {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.tooltipster-update-fade {
-  -webkit-animation: tooltipster-fading 400ms;
-          animation: tooltipster-fading 400ms;
-}
-
-/* rotate */
-@-webkit-keyframes tooltipster-rotating {
-  25% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-  75% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-@keyframes tooltipster-rotating {
-  25% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-  75% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
-.tooltipster-update-rotate {
-  -webkit-animation: tooltipster-rotating 600ms;
-          animation: tooltipster-rotating 600ms;
-}
-
-/* scale */
-@-webkit-keyframes tooltipster-scaling {
-  50% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-@keyframes tooltipster-scaling {
-  50% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-.tooltipster-update-scale {
-  -webkit-animation: tooltipster-scaling 600ms;
-          animation: tooltipster-scaling 600ms;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -5709,11 +5472,13 @@ img.mobile-poster {
 }
 
 .map__tooltips {
-  display: none;
+  margin: 40px auto;
+  max-width: 950px;
 }
 
 .map__tooltip {
-  padding: 24px;
+  position: relative;
+  padding: 32px;
   background: #fff;
   -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -5725,14 +5490,36 @@ img.mobile-poster {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 220px;
+  display: none;
 }
 
 .map__tooltip-title {
-  font-size: 20px;
-  line-height: 26px;
-  color: #0BA14B;
-  font-weight: 700;
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.map__tooltip-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0;
+  padding: 17px;
+  cursor: pointer;
+  -webkit-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+}
+
+.map__tooltip-close:hover {
+  color: rgba(32, 32, 32, 0.5);
+}
+
+.map__tooltip-close .ico {
+  width: 1em;
+  height: 1em;
+  font-size: 14px;
 }
 
 .map__tooltip-row {
@@ -5743,6 +5530,7 @@ img.mobile-poster {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 8px;
+  padding-right: 15px;
 }
 
 .map__tooltip-row p {
@@ -5822,11 +5610,10 @@ img.mobile-poster {
   }
   .map__tooltip {
     padding: 12px;
-    max-width: 140px;
   }
   .map__tooltip-title {
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 21px;
+    line-height: 26px;
   }
   .map__tooltip-row {
     margin-top: 6px;
@@ -5844,6 +5631,72 @@ img.mobile-poster {
     height: 35px;
     padding: 7px;
     margin-right: 8px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .map__tooltip-row {
+    padding-right: 0;
+  }
+}
+
+.picture-container, .no-picture-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.picture-container + .no-picture-container, .no-picture-container + .picture-container {
+  border-top: 1px solid #F2F2F2;
+  padding-top: 12px;
+  margin-top: 24px;
+}
+
+.picture-container .map__tooltip-row {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.33333%;
+          flex: 0 0 33.33333%;
+}
+
+@media only screen and (max-width: 767px) {
+  .picture-container .map__tooltip-row {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .picture-container .map__tooltip-row {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.no-picture-container {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.no-picture-container .map__tooltip-row {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+}
+
+@media only screen and (max-width: 1023px) {
+  .no-picture-container .map__tooltip-row {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .no-picture-container .map__tooltip-row {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
@@ -7763,7 +7616,7 @@ body:not(.is-mobile) .product__content:hover .product__plus .ico {
           transform: rotate(45deg);
 }
 
-body:not(.is-mobile) .product__content:hover .product__plus {
+body:not(.is-mobile) .product__content:hover .product__dropdown {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
@@ -9937,7 +9790,7 @@ body:not(.is-mobile) .product__content:hover .product__plus {
   content: '';
   left: 2px;
   top: -3px;
-  background: #D0021B;
+  background: #0BA14B;
 }
 
 .production__graph-item p {

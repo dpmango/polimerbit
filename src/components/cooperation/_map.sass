@@ -35,25 +35,42 @@
 
 .map
   &__tooltips
-    display: none
+    // display: none
+    margin: 40px auto
+    max-width: 950px
   &__tooltip
-    padding: 24px
+    position: relative
+    padding: 32px
     background: #fff
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1)
     border-radius: 8px
     display: flex
     flex-direction: column
-    max-width: 220px
-    // display: none
+    display: none
     &-title
-      font-size: 20px
-      line-height: 26px
-      color: $colorPrimary
-      font-weight: 700
+      font-size: 26px
+      line-height: 34px
+      font-weight: 400
+      margin-bottom: 0.5em
+    &-close
+      position: absolute
+      top: 20px
+      right: 20px
+      font-size: 0
+      padding: 17px
+      cursor: pointer
+      transition: color .25s $ease
+      &:hover
+        color: rgba($fontColor, .5)
+      .ico
+        width: 1em
+        height: 1em
+        font-size: 14px
     &-row
       display: flex
       align-items: center
       margin-top: 8px
+      padding-right: 15px
       p
         font-size: 16px
         line-height: 21px
@@ -105,10 +122,9 @@
   .map
     &__tooltip
       padding: 12px
-      max-width: 140px
       &-title
-        font-size: 16px
-        line-height: 21px
+        font-size: 21px
+        line-height: 26px
       &-row
         margin-top: 6px
         p
@@ -122,3 +138,34 @@
         height: 35px
         padding: 7px
         margin-right: 8px
+
++r($sm)
+  .map
+    &__tooltip-row
+      padding-right: 0
+
+.picture-container, .no-picture-container
+  display: flex
+  flex-wrap: wrap
+
+.picture-container + .no-picture-container, .no-picture-container + .picture-container
+  border-top: 1px solid #F2F2F2
+  padding-top: 12px
+  margin-top: 24px
+
+.picture-container
+  .map__tooltip-row
+    flex: 0 0 $col4
+    +r($md)
+      flex-basis: $col6
+    +r($sm)
+      flex-basis: $col12
+
+.no-picture-container
+  align-items: flex-start
+  .map__tooltip-row
+    flex: 0 0 $col3
+    +r($lg)
+      flex-basis: $col6
+    +r($sm)
+      flex-basis: $col12

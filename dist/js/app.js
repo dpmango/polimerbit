@@ -380,7 +380,6 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.ScrollReveal.init();
       APP.Plugins.TextareaAutoExpand.init();
       APP.Plugins.Validations.init();
-      APP.Plugins.Tooltip.init();
       APP.Plugins.Sticky.init();
       APP.Plugins.Ymaps.init();
     }; // All components from `src/componenets`
@@ -693,24 +692,6 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
           offset_top: dataOffsetTop
         });
       });
-    }
-  };
-})(jQuery, window.APP); //////////
-// TOOLTIPS
-//////////
-
-
-(function ($, APP) {
-  APP.Plugins.Tooltip = {
-    init: function init() {
-      var schemeOptions = {
-        side: 'top'
-      };
-      $('.tooltipstered').tooltipster(schemeOptions);
-
-      _window.on('scroll', throttle(function () {
-        $('.tooltipstered').tooltipster('reposition');
-      }, 50));
     }
   };
 })(jQuery, window.APP); ////////////////
@@ -1139,6 +1120,22 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
         }
 
         $('.cdp').attr('actpage', paginationPage);
+      }) // tooltipstered
+      .on('click', '.tooltipstered', function () {
+        // changed tooltipstered to custom opener
+        var targetDataSelector = $(this).data('tooltip-content');
+        $('.map__tooltip').hide();
+        $(targetDataSelector).fadeIn();
+        var topTarget = $('.map__tooltips').offset().top - 80;
+        TweenLite.to(window, 0.6, {
+          scrollTo: {
+            y: topTarget,
+            autoKill: false
+          },
+          ease: easingSwing
+        });
+      }).on('click', '.map__tooltip-close', function () {
+        $('.map__tooltip').fadeOut();
       });
     },
     destroy: function destroy() {// ... code ...

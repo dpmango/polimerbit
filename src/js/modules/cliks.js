@@ -106,7 +106,25 @@
             paginationPage = parseInt(go, 10);
           }
           $('.cdp').attr('actpage', paginationPage);
-        });
+        })
+
+        // tooltipstered
+        .on('click', '.tooltipstered', function() {
+          // changed tooltipstered to custom opener
+          var targetDataSelector = $(this).data('tooltip-content');
+          $('.map__tooltip').hide();
+          $(targetDataSelector).fadeIn();
+
+          var topTarget = $('.map__tooltips').offset().top - 80;
+
+          TweenLite.to(window, 0.6, {
+            scrollTo: { y: topTarget, autoKill: false },
+            ease: easingSwing,
+          });
+        })
+        .on('click', '.map__tooltip-close', function() {
+          $('.map__tooltip').fadeOut();
+        })
     },
     destroy: function() {
       // ... code ...
